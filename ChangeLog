@@ -1,0 +1,25 @@
+------------------------------------------------------------
+User: chamont  Fri Jun 10 06:00:56 PDT 2005
+RootConvert
+
+Log Message:
+new package to be shared by RootIo and RootCnvSvc
+
+Status:
+
+Vendor Tag:	LLR
+Release Tags:	start
+		
+N RootConvert/.cvsignore
+N RootConvert/cmt/.cvsignore
+N RootConvert/cmt/requirements
+N RootConvert/doc/release.notes
+N RootConvert/doc/.cvsignore
+N RootConvert/RootConvert/Recon/CalClusterConvert.h
+N RootConvert/src/mainpage.h
+N RootConvert/src/test/.cvsignore
+N RootConvert/src/Recon/CalClusterConvert.cxx
+
+No conflicts created by this import
+
+    *
