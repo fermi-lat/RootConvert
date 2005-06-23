@@ -1,4 +1,22 @@
 ------------------------------------------------------------
+TAG
+Tag name: v0r0p0, operation: add
+Package: RootConvert
+User: usher  Thu Jun 23 13:33:15 2005
+Files:
+  RootConvert/.cvsignore  1.1.1.1
+  RootConvert/ChangeLog  1.2
+  RootConvert/RootConvert/Recon/CalClusterConvert.h  1.1.1.1
+  RootConvert/cmt/.cvsignore  1.1.1.1
+  RootConvert/cmt/requirements  1.2
+  RootConvert/doc/.cvsignore  1.1.1.1
+  RootConvert/doc/release.notes  1.2
+  RootConvert/src/mainpage.h  1.1.1.1
+  RootConvert/src/Recon/CalClusterConvert.cxx  1.3
+  RootConvert/src/test/.cvsignore  1.1.1.1
+
+    *
+------------------------------------------------------------
 User: usher  Thu Jun 23 13:32:52 PDT 2005
 RootConvert/src/Recon
 
