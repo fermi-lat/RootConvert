@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Thu Jun 23 13:32:52 PDT 2005
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+Preparing to tag preliminary CalRecon release
+    *
+------------------------------------------------------------
+User: usher  Thu Jun 23 13:32:52 PDT 2005
 RootConvert/doc
 
 Modified Files:
