@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: chamont  Wed Jul  6 11:27:39 PDT 2005
+RootConvert/RootConvert/MonteCarlo
+
+Added Files:
+	McPositionHitConvert.h 
+Log Message:
+add a low level converter for McPositionHit, utilities, and fix a bug in CalCluster convert (was switching trans and longAsym)
+    *
+------------------------------------------------------------
 User: chamont  Wed Jul  6 08:29:01 PDT 2005
 RootConvert/src/Utilities
 
