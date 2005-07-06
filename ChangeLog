@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: chamont  Wed Jul  6 11:27:40 PDT 2005
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+add a low level converter for McPositionHit, utilities, and fix a bug in CalCluster convert (was switching trans and longAsym)
+    *
+------------------------------------------------------------
+User: chamont  Wed Jul  6 11:27:40 PDT 2005
 RootConvert/src/MonteCarlo
 
 Added Files:
