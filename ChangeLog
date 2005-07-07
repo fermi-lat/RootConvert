@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: chamont  Thu Jul  7 06:16:14 PDT 2005
+RootConvert/src/test
+
+Modified Files:
+	test_RootConvert.cxx 
+Log Message:
+for tests, use the root classes Fake() and Compare() methods
+    *
+------------------------------------------------------------
+User: chamont  Thu Jul  7 06:16:14 PDT 2005
 RootConvert/src/Utilities
 
 Modified Files:
