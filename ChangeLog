@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: chamont  Thu Jul  7 08:50:29 PDT 2005
+RootConvert/src/test
+
+Modified Files:
+	test_RootConvert.cxx 
+Log Message:
+Compare() is reserved by ROOT, replace with CompareInRange()
+    *
+------------------------------------------------------------
 User: chamont  Thu Jul  7 06:16:14 PDT 2005
 RootConvert/src/test
 
