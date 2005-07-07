@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: chamont  Thu Jul  7 06:16:14 PDT 2005
+RootConvert/RootConvert/MonteCarlo
+
+Modified Files:
+	McPositionHitConvert.h 
+Log Message:
+for tests, use the root classes Fake() and Compare() methods
+    *
+------------------------------------------------------------
 User: chamont  Wed Jul  6 11:27:40 PDT 2005
 RootConvert/src/test
 
