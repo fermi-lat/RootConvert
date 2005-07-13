@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: chamont  Wed Jul 13 08:43:10 PDT 2005
+RootConvert/src/test
+
+Modified Files:
+	test_RootConvert.cxx 
+Log Message:
+upgrade for new TDS Event/CalRecon/* usage of const and status bits, plus few details
+    *
+------------------------------------------------------------
+User: chamont  Wed Jul 13 08:43:10 PDT 2005
 RootConvert/src/Recon
 
 Modified Files:
