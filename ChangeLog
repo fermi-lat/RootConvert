@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: chamont  Wed Jul 13 08:43:10 PDT 2005
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx CalEventEnergyConvert.cxx 
+Log Message:
+upgrade for new TDS Event/CalRecon/* usage of const and status bits, plus few details
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1, operation: add
 Package: RootConvert
