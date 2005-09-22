@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Sep 22 11:54:53 PDT 2005
+RootConvert/RootConvert/MonteCarlo
+
+Added Files:
+	McTrajectoryConvert.h 
+Log Message:
+New conversion class for McTrajectory class
+    *
+------------------------------------------------------------
 User: usher  Wed Jul 13 09:29:19 PDT 2005
 RootConvert
 
