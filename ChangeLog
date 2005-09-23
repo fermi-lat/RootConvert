@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Fri Sep 23 11:49:43 PDT 2005
+RootConvert/src/Recon
+
+Added Files:
+	CalMipTrackConvert.cxx 
+Log Message:
+Introduce RootConvert object for CalMipTracks - still needs to deal with xtals but will work for ntuples
+    *
+------------------------------------------------------------
+User: usher  Fri Sep 23 11:49:43 PDT 2005
 RootConvert/RootConvert/Recon
 
 Added Files:
