@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: chamont  Mon Dec  5 12:51:05 PST 2005
+RootConvert/src/Recon
+
+Modified Files:
+	CalEventEnergyConvert.cxx 
+Added Files:
+	AcdReconConvert.cxx 
+Log Message:
+forgotten files for AcdRecon, and bug fix
+    *
+------------------------------------------------------------
 User: chamont  Mon Dec  5 12:51:04 PST 2005
 RootConvert/RootConvert/Recon
 
