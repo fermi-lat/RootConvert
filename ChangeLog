@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Wed Jan  4 16:50:04 PST 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Added AcdTkrPoca and AcdHit to AcdRecon converter
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r2, operation: add
 Package: RootConvert
