@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: echarles  Wed Jan  4 16:50:04 PST 2006
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Added AcdTkrPoca and AcdHit to AcdRecon converter
+    *
+------------------------------------------------------------
+User: echarles  Wed Jan  4 16:50:04 PST 2006
 RootConvert/doc
 
 Modified Files:
