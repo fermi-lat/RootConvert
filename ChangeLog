@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Mon Jan  9 18:20:19 PST 2006
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Fill TkrTrackParams in AcdTkrPoca
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r3, operation: add
 Package: RootConvert
