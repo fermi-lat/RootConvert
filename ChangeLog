@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: chamont  Thu Jan 19 15:27:31 PST 2006
+RootConvert/src/test
+
+Modified Files:
+	test_RootConvert.cxx 
+Log Message:
+Fix test bug : make the difference between top objects and low level elements
+    *
+------------------------------------------------------------
+User: chamont  Thu Jan 19 15:27:31 PST 2006
 RootConvert/doc
 
 Modified Files:
