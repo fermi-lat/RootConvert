@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: chamont  Thu Jan 19 15:27:31 PST 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Fix test bug : make the difference between top objects and low level elements
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r4, operation: add
 Package: RootConvert
