@@ -1,4 +1,39 @@
 ------------------------------------------------------------
+TAG
+Tag name: v1r4, operation: add
+Package: RootConvert
+User: chamont  Wed Jan 18 19:07:47 2006
+Files:
+  RootConvert/.cvsignore  1.2
+  RootConvert/ChangeLog  1.54
+  RootConvert/RootConvert/MonteCarlo/McPositionHitConvert.h  1.2
+  RootConvert/RootConvert/MonteCarlo/McTrajectoryConvert.h  1.1
+  RootConvert/RootConvert/Recon/CalMipTrackConvert.h  1.1
+  RootConvert/RootConvert/Recon/CalParamsConvert.h  1.1
+  RootConvert/RootConvert/Recon/CalEventEnergyConvert.h  1.1
+  RootConvert/RootConvert/Recon/CalClusterConvert.h  1.3
+  RootConvert/RootConvert/Recon/AcdReconConvert.h  1.1
+  RootConvert/RootConvert/Recon/CalXtalRecDataConvert.h  1.1
+  RootConvert/RootConvert/Utilities/Toolkit.h  1.3
+  RootConvert/cmt/.cvsignore  1.1.1.1
+  RootConvert/cmt/requirements  1.6
+  RootConvert/doc/.cvsignore  1.1.1.1
+  RootConvert/doc/release.notes  1.7
+  RootConvert/src/mainpage.h  1.1.1.1
+  RootConvert/src/MonteCarlo/McTrajectoryConvert.cxx  1.1
+  RootConvert/src/MonteCarlo/McPositionHitConvert.cxx  1.2
+  RootConvert/src/Recon/CalParamsConvert.cxx  1.1
+  RootConvert/src/Recon/CalMipTrackConvert.cxx  1.1
+  RootConvert/src/Recon/CalXtalRecDataConvert.cxx  1.1
+  RootConvert/src/Recon/CalEventEnergyConvert.cxx  1.4
+  RootConvert/src/Recon/CalClusterConvert.cxx  1.7
+  RootConvert/src/Recon/AcdReconConvert.cxx  1.3
+  RootConvert/src/Utilities/Toolkit.cxx  1.3
+  RootConvert/src/test/.cvsignore  1.1.1.1
+  RootConvert/src/test/test_RootConvert.cxx  1.7
+
+    *
+------------------------------------------------------------
 User: chamont  Wed Jan 18 19:07:20 PST 2006
 RootConvert/src/test
 
