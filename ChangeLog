@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: chamont  Tue Jan 24 21:57:16 PST 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+
+ v1r4p2 25-Jan-2006 DC  Fake implementation for some methods not yet implemented,
+                        so that the package compiles on windows.
+
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r4p1, operation: add
 Package: RootConvert
