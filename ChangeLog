@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: chamont  Tue Jan 24 21:57:17 PST 2006
+RootConvert/src/Utilities
+
+Modified Files:
+	Toolkit.cxx 
+Log Message:
+
+ v1r4p2 25-Jan-2006 DC  Fake implementation for some methods not yet implemented,
+                        so that the package compiles on windows.
+
+
+    *
+------------------------------------------------------------
 User: chamont  Tue Jan 24 21:57:16 PST 2006
 RootConvert/doc
 
