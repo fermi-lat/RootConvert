@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: echarles  Wed Feb  1 17:06:23 PST 2006
+RootConvert/RootConvert/Digi
+
+Added Files:
+      Tag: EM-v5r070305p5
+	LsfDigiConvert.h 
+Log Message:
+EAC added LsfDigiConvert
+    *
+------------------------------------------------------------
 User: echarles  Wed Feb  1 17:04:33 PST 2006
 RootConvert/src/Digi
 
