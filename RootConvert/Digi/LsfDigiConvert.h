@@ -1,7 +1,7 @@
 #ifndef RootConvert_LsfDigiConvert_H
 #define RootConvert_LsfDigiConvert_H 1
 
-#include <LdfEvent/LsfTimeHack.h>
+#include <LdfEvent/LsfGemTime.h>
 #include <LdfEvent/LsfTimeTone.h>
 #include <LdfEvent/LsfTime.h>
 #include <LdfEvent/LsfRunInfo.h>
@@ -10,7 +10,7 @@
 #include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
-#include <digiRootData/LsfTimeHack.h>
+#include <digiRootData/LsfGemTime.h>
 #include <digiRootData/LsfTimeTone.h>
 #include <digiRootData/LsfTime.h>
 #include <digiRootData/LsfRunInfo.h>
@@ -21,10 +21,10 @@
 
 namespace RootPersistence {
 
-  /// Fill persitent verison of TimeHack
-  void convert( const LsfEvent::TimeHack&, TimeHack& ) ;
-  /// Fill transient verison of TimeHack
-  void convert( const TimeHack&, LsfEvent::TimeHack& ) ;
+  /// Fill persitent verison of GemTime
+  void convert( const LsfEvent::GemTime&, GemTime& ) ;
+  /// Fill transient verison of GemTime
+  void convert( const GemTime&, LsfEvent::GemTime& ) ;
 
   /// Fill persitent verison of TimeTone
   void convert( const LsfEvent::TimeTone&, TimeTone& ) ;

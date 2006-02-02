@@ -1,4 +1,4 @@
-#include <LdfEvent/LsfTimeHack.h>
+#include <LdfEvent/LsfGemTime.h>
 #include <LdfEvent/LsfTimeTone.h>
 #include <LdfEvent/LsfTime.h>
 #include <LdfEvent/LsfRunInfo.h>
@@ -7,7 +7,7 @@
 #include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
-#include <digiRootData/LsfTimeHack.h>
+#include <digiRootData/LsfGemTime.h>
 #include <digiRootData/LsfTimeTone.h>
 #include <digiRootData/LsfTime.h>
 #include <digiRootData/LsfRunInfo.h>
@@ -20,20 +20,20 @@
 
 namespace RootPersistence {
 
-  void convert( const LsfEvent::TimeHack& tdsObj, TimeHack& rootObj) {
+  void convert( const LsfEvent::GemTime& tdsObj, GemTime& rootObj) {
     rootObj.initialize(tdsObj.hacks(),tdsObj.ticks());
   }; 
-  void convert( const TimeHack& rootObj, LsfEvent::TimeHack& tdsObj) {    
+  void convert( const GemTime& rootObj, LsfEvent::GemTime& tdsObj) {    
     tdsObj.set(rootObj.hacks(),rootObj.ticks());
   };
   
   void convert( const LsfEvent::TimeTone& tdsObj, TimeTone& rootObj) {
-    TimeHack rootHack;
+    GemTime rootHack;
     convert(tdsObj.timeHack(),rootHack);
     rootObj.initialize(tdsObj.incomplete(),tdsObj.timeSecs(),tdsObj.flywheeling(),tdsObj.flags(),rootHack);
   };
   void convert( const TimeTone& rootObj, LsfEvent::TimeTone& tdsObj) {
-    LsfEvent::TimeHack tdsHack;
+    LsfEvent::GemTime tdsHack;
     convert(rootObj.timeHack(),tdsHack);
     tdsObj.set(rootObj.incomplete(),rootObj.timeSecs(),rootObj.flywheeling(),rootObj.flags(),tdsHack);
   };
@@ -41,7 +41,7 @@ namespace RootPersistence {
   void convert( const LsfEvent::Time& tdsObj, Time& rootObj) {
     TimeTone current;
     TimeTone previous;
-    TimeHack hack;
+    GemTime hack;
     convert(tdsObj.current(),current);
     convert(tdsObj.previous(),previous);
     convert(tdsObj.timeHack(),hack);
@@ -50,7 +50,7 @@ namespace RootPersistence {
   void convert( const Time& rootObj, LsfEvent::Time& tdsObj) {
     LsfEvent::TimeTone current;
     LsfEvent::TimeTone previous;
-    LsfEvent::TimeHack hack;
+    LsfEvent::GemTime hack;
     convert(rootObj.current(),current);
     convert(rootObj.previous(),previous);
     convert(rootObj.timeHack(),hack);
@@ -65,15 +65,15 @@ namespace RootPersistence {
   };
    
   void convert( const LsfEvent::DatagramInfo& tdsObj, DatagramInfo& rootObj) {
-    rootObj.initialize(tdsObj.openReason(),tdsObj.openRequester(),
+    rootObj.initialize(tdsObj.openAction(),tdsObj.openReason(),
 		       tdsObj.crate(),tdsObj.mode(),
-		       tdsObj.closeReason(),tdsObj.closeRequester(),
+		       tdsObj.closeAction(),tdsObj.closeReason(),
 		       tdsObj.datagrams(),tdsObj.modeChanges());    
   };
   void convert( const DatagramInfo& rootObj, LsfEvent::DatagramInfo& tdsObj) {
-    tdsObj.set(rootObj.openReason(),rootObj.openRequester(),
+    tdsObj.set(rootObj.openAction(),rootObj.openReason(),
 	       rootObj.crate(),rootObj.mode(),
-	       rootObj.closeReason(),rootObj.closeRequester(),
+	       rootObj.closeAction(),rootObj.closeReason(),
 	       rootObj.datagrams(),rootObj.modeChanges());
   };
 
