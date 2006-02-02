@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: echarles  Thu Feb  2 14:31:58 PST 2006
+RootConvert/RootConvert/Digi
+
+Modified Files:
+      Tag: EM-v5r070305p5
+	LsfDigiConvert.h 
+Log Message:
+updated LsfDigiConvert to match Dfi header files instead of doc
+    *
+------------------------------------------------------------
 User: echarles  Wed Feb  1 17:06:31 PST 2006
 RootConvert/src/Digi
 
