@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: echarles  Wed Feb  1 17:06:31 PST 2006
+RootConvert/src/Digi
+
+Added Files:
+      Tag: EM-v5r070305p5
+	LsfDigiConvert.cxx 
+Log Message:
+EAC added LsfDigiConvert
+    *
+------------------------------------------------------------
+User: echarles  Wed Feb  1 17:06:31 PST 2006
 RootConvert/doc
 
 Modified Files:
