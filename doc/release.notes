@@ -3,6 +3,7 @@
  author Ursula Berthon
  @verbatim
 
+ eac-060201 10-Feb-2006  EAC added LsfDigiConvert 
  v1r1p0 24-Sep-2005 TU New converter for McTrajectory and CalMipTracks
 
  v3r1p1 15-Fev-2005 David Chamont upgrade for GlastRelease v6r0, especially
