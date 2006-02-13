@@ -3,7 +3,7 @@
 #include <LdfEvent/LsfTime.h>
 #include <LdfEvent/LsfRunInfo.h>
 #include <LdfEvent/LsfDatagramInfo.h>
-#include <LdfEvent/LsfGemScalars.h>
+#include <LdfEvent/LsfGemScalers.h>
 #include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
@@ -12,7 +12,7 @@
 #include <digiRootData/LsfTime.h>
 #include <digiRootData/LsfRunInfo.h>
 #include <digiRootData/LsfDatagramInfo.h>
-#include <digiRootData/LsfGemScalars.h>
+#include <digiRootData/LsfGemScalers.h>
 #include <digiRootData/LsfConfiguration.h>
 #include <digiRootData/LsfMetaEvent.h>
 
@@ -77,12 +77,12 @@ namespace RootPersistence {
 	       rootObj.datagrams(),rootObj.modeChanges());
   };
 
-  void convert( const LsfEvent::GemScalars& tdsObj, GemScalars& rootObj) {
+  void convert( const LsfEvent::GemScalers& tdsObj, GemScalers& rootObj) {
     rootObj.initialize(tdsObj.elapsed(),tdsObj.livetime(),
 		       tdsObj.prescaled(),tdsObj.discarded(),
 		       tdsObj.sequence(),tdsObj.deadzone());
   };
-  void convert( const GemScalars& rootObj, LsfEvent::GemScalars& tdsObj) {
+  void convert( const GemScalers& rootObj, LsfEvent::GemScalers& tdsObj) {
     tdsObj.set(rootObj.elapsed(),rootObj.livetime(),
 	       rootObj.prescaled(),rootObj.discarded(),
 	       rootObj.sequence(),rootObj.deadzone());
@@ -119,29 +119,29 @@ namespace RootPersistence {
   void convert( const LsfEvent::MetaEvent& tdsObj, MetaEvent& rootObj) {
     RunInfo run;
     DatagramInfo datagram;
-    GemScalars scalars;
+    GemScalers scalers;
     Time time;
     Configuration* configuration(0);
     convert(tdsObj.run(),run);
     convert(tdsObj.datagram(),datagram);
-    convert(tdsObj.scalars(),scalars);
+    convert(tdsObj.scalers(),scalers);
     convert(tdsObj.time(),time);
     convert(tdsObj.configuration(),configuration);
-    rootObj.initialize(run,datagram,scalars,time,*configuration);
+    rootObj.initialize(run,datagram,scalers,time,*configuration);
     delete configuration;
   };
   void convert( const MetaEvent& rootObj, LsfEvent::MetaEvent& tdsObj) {
     LsfEvent::RunInfo run;
     LsfEvent::DatagramInfo datagram;
-    LsfEvent::GemScalars scalars;
+    LsfEvent::GemScalers scalers;
     LsfEvent::Time time;
     LsfEvent::Configuration* configuration(0);
     convert(rootObj.run(),run);
     convert(rootObj.datagram(),datagram);
-    convert(rootObj.scalars(),scalars);
+    convert(rootObj.scalers(),scalers);
     convert(rootObj.time(),time);
     convert(rootObj.configuration(),configuration);
-    tdsObj.set(run,datagram,scalars,time,*configuration);
+    tdsObj.set(run,datagram,scalers,time,*configuration);
     delete configuration;
   };
 

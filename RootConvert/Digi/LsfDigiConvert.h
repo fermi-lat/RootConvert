@@ -6,7 +6,7 @@
 #include <LdfEvent/LsfTime.h>
 #include <LdfEvent/LsfRunInfo.h>
 #include <LdfEvent/LsfDatagramInfo.h>
-#include <LdfEvent/LsfGemScalars.h>
+#include <LdfEvent/LsfGemScalers.h>
 #include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
@@ -15,7 +15,7 @@
 #include <digiRootData/LsfTime.h>
 #include <digiRootData/LsfRunInfo.h>
 #include <digiRootData/LsfDatagramInfo.h>
-#include <digiRootData/LsfGemScalars.h>
+#include <digiRootData/LsfGemScalers.h>
 #include <digiRootData/LsfConfiguration.h>
 #include <digiRootData/LsfMetaEvent.h>
 
@@ -46,10 +46,10 @@ namespace RootPersistence {
   /// Fill transient verison of DatagramInfo
   void convert( const DatagramInfo&, LsfEvent::DatagramInfo& ) ;
 
-  /// Fill persitent verison of GemScalars
-  void convert( const LsfEvent::GemScalars&, GemScalars& ) ;
-  /// Fill transient verison of GemScalars
-  void convert( const GemScalars&, LsfEvent::GemScalars& ) ;
+  /// Fill persitent verison of GemScalers
+  void convert( const LsfEvent::GemScalers&, GemScalers& ) ;
+  /// Fill transient verison of GemScalers
+  void convert( const GemScalers&, LsfEvent::GemScalers& ) ;
 
   /// Fill persitent verison of Configuration
   /// this handles the polymorphism of Configuration
