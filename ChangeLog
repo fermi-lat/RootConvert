@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: echarles  Mon Feb 13 12:02:34 PST 2006
+RootConvert/RootConvert/Digi
+
+Modified Files:
+      Tag: EM-v5r070305p5
+	LsfDigiConvert.h 
+Log Message:
+Changed Scalar to Scaler in LsfLand
+    *
+------------------------------------------------------------
 User: echarles  Thu Feb  2 14:31:58 PST 2006
 RootConvert/src/Digi
 
