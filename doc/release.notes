@@ -3,6 +3,7 @@
  author Ursula Berthon
  @verbatim
 
+v1r1p1em1 13-Feb-2006 EAC Changed Scalar to Scaler in LsfLand.
  eac-060202 02-Feb-2006  EAC updated LsfDigiConvert to match Dfi header files instead of doc 
  eac-060201 01-Feb-2006  EAC added LsfDigiConvert 
  v1r1p0 24-Sep-2005 TU New converter for McTrajectory and CalMipTracks
