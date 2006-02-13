@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: echarles  Mon Feb 13 12:02:34 PST 2006
+RootConvert/doc
+
+Modified Files:
+      Tag: EM-v5r070305p5
+	release.notes 
+Log Message:
+Changed Scalar to Scaler in LsfLand
+    *
+------------------------------------------------------------
+User: echarles  Mon Feb 13 12:02:34 PST 2006
 RootConvert/RootConvert/Digi
 
 Modified Files:
