@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Mon Feb 27 10:57:35 PST 2006
+RootConvert/cmt
+
+Modified Files:
+      Tag: EM-v5r070305p5
+	requirements 
+Log Message:
+rename ROOT LSF classes to be consistent with file names
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r1p1em2, operation: add
 Package: RootConvert
