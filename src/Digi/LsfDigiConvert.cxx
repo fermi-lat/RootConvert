@@ -1,20 +1,13 @@
-//#include <LdfEvent/LsfGemTime.h>
-//#include <LdfEvent/LsfTimeTone.h>
-//#include <LdfEvent/LsfTime.h>
-//#include <LdfEvent/LsfRunInfo.h>
-//#include <LdfEvent/LsfDatagramInfo.h>
-//#include <LdfEvent/LsfGemScalers.h>
-//#include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
-#include <digiRootData/LsfGemTime.h>
-#include <digiRootData/LsfTimeTone.h>
+#include <digiRootData/GemTime.h>
+#include <digiRootData/TimeTone.h>
 #include <digiRootData/LsfTime.h>
-#include <digiRootData/LsfRunInfo.h>
-#include <digiRootData/LsfDatagramInfo.h>
-#include <digiRootData/LsfGemScalers.h>
-#include <digiRootData/LsfConfiguration.h>
-#include <digiRootData/LsfMetaEvent.h>
+#include <digiRootData/RunInfo.h>
+#include <digiRootData/DatagramInfo.h>
+#include <digiRootData/GemScalers.h>
+#include <digiRootData/Configuration.h>
+#include <digiRootData/MetaEvent.h>
 
 #include <RootConvert/Utilities/Toolkit.h>
 
@@ -38,7 +31,7 @@ namespace RootPersistence {
     tdsObj.set(rootObj.incomplete(),rootObj.timeSecs(),rootObj.flywheeling(),rootObj.flags(),tdsHack);
   };
   
-  void convert( const lsfData::Time& tdsObj, Time& rootObj) {
+  void convert( const lsfData::Time& tdsObj, LsfTime& rootObj) {
     TimeTone current;
     TimeTone previous;
     GemTime hack;
@@ -47,7 +40,7 @@ namespace RootPersistence {
     convert(tdsObj.timeHack(),hack);
     rootObj.initialize(current,previous,hack,tdsObj.timeTicks());    
   };
-  void convert( const Time& rootObj, lsfData::Time& tdsObj) {
+  void convert( const LsfTime& rootObj, lsfData::Time& tdsObj) {
     lsfData::TimeTone current;
     lsfData::TimeTone previous;
     lsfData::GemTime hack;
@@ -120,7 +113,7 @@ namespace RootPersistence {
     RunInfo run;
     DatagramInfo datagram;
     GemScalers scalers;
-    Time time;
+    LsfTime time;
     Configuration* configuration(0);
     convert(tdsObj.run(),run);
     convert(tdsObj.datagram(),datagram);

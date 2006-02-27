@@ -1,23 +1,16 @@
 #ifndef RootConvert_LsfDigiConvert_H
 #define RootConvert_LsfDigiConvert_H 1
 
-//#include <LdfEvent/LsfGemTime.h>
-//#include <LdfEvent/LsfTimeTone.h>
-//#include <LdfEvent/LsfTime.h>
-//#include <LdfEvent/LsfRunInfo.h>
-//#include <LdfEvent/LsfDatagramInfo.h>
-//#include <LdfEvent/LsfGemScalers.h>
-//#include <LdfEvent/LsfConfiguration.h>
 #include <LdfEvent/LsfMetaEvent.h>
 
-#include <digiRootData/LsfGemTime.h>
-#include <digiRootData/LsfTimeTone.h>
+#include <digiRootData/GemTime.h>
+#include <digiRootData/TimeTone.h>
 #include <digiRootData/LsfTime.h>
-#include <digiRootData/LsfRunInfo.h>
-#include <digiRootData/LsfDatagramInfo.h>
-#include <digiRootData/LsfGemScalers.h>
-#include <digiRootData/LsfConfiguration.h>
-#include <digiRootData/LsfMetaEvent.h>
+#include <digiRootData/RunInfo.h>
+#include <digiRootData/DatagramInfo.h>
+#include <digiRootData/GemScalers.h>
+#include <digiRootData/Configuration.h>
+#include <digiRootData/MetaEvent.h>
 
 namespace RootPersistence {
 
@@ -32,9 +25,9 @@ namespace RootPersistence {
   void convert( const TimeTone&, lsfData::TimeTone& ) ;
 
   /// Fill persitent verison of Time
-  void convert( const lsfData::Time&, Time& ) ;
+  void convert( const lsfData::Time&, LsfTime& ) ;
   /// Fill transient verison of Time
-  void convert( const Time&, lsfData::Time& ) ;
+  void convert( const LsfTime&, lsfData::Time& ) ;
 
   /// Fill persitent verison of RunInfo
   void convert( const lsfData::RunInfo&, RunInfo& ) ;
