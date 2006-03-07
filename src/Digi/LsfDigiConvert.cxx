@@ -11,6 +11,7 @@
 
 #include <RootConvert/Utilities/Toolkit.h>
 
+
 namespace RootPersistence {
 
   void convert( const lsfData::GemTime& tdsObj, GemTime& rootObj) {
@@ -114,28 +115,29 @@ namespace RootPersistence {
     DatagramInfo datagram;
     GemScalers scalers;
     LsfTime time;
-    Configuration* configuration(0);
+    Configuration* config(0);
     convert(tdsObj.run(),run);
     convert(tdsObj.datagram(),datagram);
     convert(tdsObj.scalers(),scalers);
     convert(tdsObj.time(),time);
-    convert(tdsObj.configuration(),configuration);
-    rootObj.initialize(run,datagram,scalers,time,*configuration);
-    delete configuration;
+    convert(tdsObj.configuration(),config);
+
+    rootObj.initialize(run,datagram,scalers,time,*config);
+    if (config) delete config;
   };
   void convert( const MetaEvent& rootObj, LsfEvent::MetaEvent& tdsObj) {
     lsfData::RunInfo run;
     lsfData::DatagramInfo datagram;
     lsfData::GemScalers scalers;
     lsfData::Time time;
-    lsfData::Configuration* configuration(0);
+    lsfData::Configuration* config(0);
     convert(rootObj.run(),run);
     convert(rootObj.datagram(),datagram);
     convert(rootObj.scalers(),scalers);
     convert(rootObj.time(),time);
-    convert(rootObj.configuration(),configuration);
-    tdsObj.set(run,datagram,scalers,time,*configuration);
-    delete configuration;
+    convert(rootObj.configuration(),config);
+    tdsObj.set(run,datagram,scalers,time,*config);
+    if(config) delete config;
   };
 
 }
