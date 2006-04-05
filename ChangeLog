@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: echarles  Tue Apr  4 19:24:04 PDT 2006
+RootConvert/RootConvert/Recon
+
+Modified Files:
+      Tag: EM-v6r070329p0
+	AcdReconConvert.h 
+Log Message:
+Added converter for new AcdTkr structures
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r15, operation: add
 Package: RootConvert
