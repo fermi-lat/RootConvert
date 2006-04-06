@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Thu Apr  6 00:22:07 PDT 2006
+RootConvert/RootConvert/Digi
+
+Added Files:
+      Tag: EM-v6r070329p0
+	LsfDigiConvert.h 
+Log Message:
+add in Lsf handling on this branch
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r5, operation: add
 Package: RootConvert
