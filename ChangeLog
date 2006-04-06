@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Wed Apr  5 18:16:15 PDT 2006
+RootConvert/RootConvert/Digi
+
+Added Files:
+      Tag: hmk-04052006
+	LsfDigiConvert.h 
+Log Message:
+add Lsf stuff on branch for now
+    *
+------------------------------------------------------------
 User: echarles  Tue Apr  4 19:24:05 PDT 2006
 RootConvert/src/Utilities
 
