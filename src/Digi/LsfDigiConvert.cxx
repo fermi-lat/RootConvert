@@ -1,4 +1,5 @@
 #include <LdfEvent/LsfMetaEvent.h>
+#include "LdfEvent/LsfCcsds.h"
 
 #include <digiRootData/GemTime.h>
 #include <digiRootData/TimeTone.h>
@@ -8,6 +9,7 @@
 #include <digiRootData/GemScalers.h>
 #include <digiRootData/Configuration.h>
 #include <digiRootData/MetaEvent.h>
+#include <digiRootData/Ccsds.h>
 
 #include <RootConvert/Utilities/Toolkit.h>
 
@@ -140,4 +142,11 @@ namespace RootPersistence {
     if(config) delete config;
   };
 
+  void convert( const LsfEvent::LsfCcsds& tdsObj, Ccsds& rootObj) {
+      rootObj.initialize(tdsObj.scid(), tdsObj.apid(), tdsObj.utc());
+  }
+
+  void convert (const Ccsds& rootObj, LsfEvent::LsfCcsds& tdsObj) {
+      tdsObj.initialize(rootObj.getScid(), rootObj.getApid(), rootObj.getUtc());
+  }
 }
