@@ -138,7 +138,11 @@ namespace RootPersistence {
     convert(rootObj.scalers(),scalers);
     convert(rootObj.time(),time);
     convert(rootObj.configuration(),config);
-    tdsObj.set(run,datagram,scalers,time,*config);
+    //tdsObj.set(run,datagram,scalers,time,*config);
+    tdsObj.setRun(run);
+    tdsObj.setDatagram(datagram);
+    tdsObj.setScalers(scalers);
+    tdsObj.setTime(time);
     if(config) delete config;
   };
 
