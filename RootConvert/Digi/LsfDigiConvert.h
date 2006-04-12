@@ -2,6 +2,7 @@
 #define RootConvert_LsfDigiConvert_H 1
 
 #include <LdfEvent/LsfMetaEvent.h>
+#include "LdfEvent/LsfCcsds.h"
 
 #include <digiRootData/GemTime.h>
 #include <digiRootData/TimeTone.h>
@@ -11,6 +12,7 @@
 #include <digiRootData/GemScalers.h>
 #include <digiRootData/Configuration.h>
 #include <digiRootData/MetaEvent.h>
+#include "digiRootData/Ccsds.h"
 
 namespace RootPersistence {
 
@@ -54,6 +56,11 @@ namespace RootPersistence {
   void convert( const LsfEvent::MetaEvent&, MetaEvent& ) ;
   /// Fill transient verison of MetaEvent
   void convert( const MetaEvent&, LsfEvent::MetaEvent& ) ;
+
+  /// Fill persitent verison of Ccsds 
+  void convert (const LsfEvent::LsfCcsds&, Ccsds&);
+  /// Fill transient verison of Ccsds 
+  void convert(const Ccsds&, LsfEvent::LsfCcsds&);
 
 }
 
