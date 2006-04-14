@@ -308,8 +308,11 @@ namespace RootPersistence {
         delete tkrTds;
     }
 
-    tdsObj.set(run,datagram,scalers,time,*config);
-    if(config) delete config;
+    tdsObj.set(run,datagram,scalers,time);
+    if(config) {
+        tdsObj.setConfiguration(*config);
+        delete config;
+    }
   };
 
   void convert( const LsfEvent::LsfCcsds& tdsObj, Ccsds& rootObj) {
