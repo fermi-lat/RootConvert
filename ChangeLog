@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: echarles  Thu Apr 13 17:38:29 PDT 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Merge in ACD stuff from Branch  EM-v6r070329p0, tag v1r5em0
+    *
+------------------------------------------------------------
+User: echarles  Thu Apr 13 17:38:29 PDT 2006
 RootConvert/cmt
 
 Modified Files:
