@@ -56,6 +56,7 @@ namespace RootPersistence {
   void convert( const lsfData::RunInfo& tdsObj, RunInfo& rootObj) {
     rootObj.initialize(tdsObj.platform(),tdsObj.dataOrigin(),tdsObj.id(),tdsObj.startTime());
   };
+
   void convert( const RunInfo& rootObj, lsfData::RunInfo& tdsObj) {
     tdsObj.set(rootObj.platform(),rootObj.dataOrigin(),rootObj.id(),rootObj.startTime());
   };
@@ -97,20 +98,136 @@ namespace RootPersistence {
     default:
       return;
     }
-  }
+  };
+
   void convert( const Configuration* rootPtr, lsfData::Configuration*& tdsPtr) {
     tdsPtr = 0;
     if ( rootPtr == 0 ) return;
-    const LpaConfiguration* asLpaRoot(0);
     switch ( rootPtr->runType() ) {
     case enums::Lsf::LPA:
-      asLpaRoot = rootPtr->castToLpaConfig();
-      tdsPtr = new lsfData::LpaConfiguration(asLpaRoot->hardwareKey(),asLpaRoot->softwareKey());
       break;
     default:
       return;
     }
-  }
+  };
+
+  void convert( const lsfData::LpaConfiguration* tdsObj,
+                LpaConfiguration& rootObj) {
+
+      rootObj.initialize(tdsObj->hardwareKey(), tdsObj->softwareKey());
+  };
+
+  void convert( const LpaConfiguration* rootObj,
+                lsfData::LpaConfiguration*& tdsObj) {
+
+      tdsObj->set(rootObj->hardwareKey(), rootObj->softwareKey());
+  };
+
+  void convert( const lsfData::LciAcdConfiguration* tdsObj, 
+                LciAcdConfiguration& rootObj) {
+      lsfData::LciAcdConfiguration::AcdTrigger triggerTds = tdsObj->trigger();
+
+      LciAcdConfiguration::AcdTrigger triggerRoot(triggerTds.veto(),
+         triggerTds.vetoVernier(), triggerTds.highDiscrim());
+
+      lsfData::Channel channelTds = tdsObj->channel();
+
+      Channel channelRoot(channelTds.single(), channelTds.all(), 
+          channelTds.latc());
+
+      rootObj.initialize(tdsObj->injected(), tdsObj->threshold(),
+          tdsObj->biasDac(), tdsObj->holdDelay(), triggerRoot, channelRoot);
+
+      rootObj.setSoftwareKey(tdsObj->softwareKey());
+      rootObj.setWriteCfg(tdsObj->writeCfg());
+      rootObj.setReadCfg(tdsObj->readCfg());
+      rootObj.setPeriod(tdsObj->period());
+      rootObj.setFlags(tdsObj->flags());
+
+  };
+
+  void convert( const LciAcdConfiguration* rootObj,
+                lsfData::LciAcdConfiguration*& tdsObj) {
+
+      LciAcdConfiguration::AcdTrigger triggerRoot = rootObj->trigger();
+      lsfData::LciAcdConfiguration::AcdTrigger triggerTds(triggerRoot.veto(),
+          triggerRoot.vetoVernier(), triggerRoot.highDiscrim());
+
+      Channel chRoot = rootObj->channel();
+      lsfData::Channel chTds(chRoot.single(), chRoot.all(), chRoot.latc());
+
+      tdsObj->set(rootObj->injected(), rootObj->threshold(),
+         rootObj->biasDac(), rootObj->holdDelay(), triggerTds, chTds);
+      tdsObj->setSoftwareKey(rootObj->softwareKey());
+      tdsObj->setWriteCfg(rootObj->writeCfg());
+      tdsObj->setReadCfg(rootObj->readCfg());
+      tdsObj->setPeriod(rootObj->period());
+      tdsObj->setFlags(rootObj->flags());
+  };
+
+  void convert( const lsfData::LciCalConfiguration* tdsObj,
+                LciCalConfiguration& rootObj) {
+      lsfData::LciCalConfiguration::CalTrigger trigTds = tdsObj->trigger();
+
+      LciCalConfiguration::CalTrigger trigRoot(trigTds.le(), trigTds.he());
+
+      lsfData::Channel chTds = tdsObj->channel();
+      Channel chRoot(chTds.single(), chTds.all(), chTds.latc());
+
+      rootObj.initialize(tdsObj->uld(), tdsObj->injected(), tdsObj->delay(),
+              tdsObj->threshold(),trigRoot,chRoot);
+      rootObj.setSoftwareKey(tdsObj->softwareKey());
+      rootObj.setWriteCfg(tdsObj->writeCfg());
+      rootObj.setReadCfg(tdsObj->readCfg());
+      rootObj.setPeriod(tdsObj->period());
+      rootObj.setFlags(tdsObj->flags());
+  };
+
+  void convert( const LciCalConfiguration* rootObj,
+                lsfData::LciCalConfiguration*& tdsObj) {
+
+      LciCalConfiguration::CalTrigger trigRoot = rootObj->trigger();
+      lsfData::LciCalConfiguration::CalTrigger trigTds(trigRoot.le(),
+          trigRoot.he());
+      Channel chRoot = rootObj->channel();
+      lsfData::Channel chTds(chRoot.single(), chRoot.all(), chRoot.latc());
+      tdsObj->set(rootObj->uld(), rootObj->injected(), rootObj->delay(),
+              rootObj->threshold(),trigTds,chTds);
+      tdsObj->setSoftwareKey(rootObj->softwareKey());
+      tdsObj->setWriteCfg(rootObj->writeCfg());
+      tdsObj->setReadCfg(rootObj->readCfg());
+      tdsObj->setPeriod(rootObj->period());
+      tdsObj->setFlags(rootObj->flags());
+  };
+
+  void convert( const lsfData::LciTkrConfiguration* tdsObj,
+                LciTkrConfiguration& rootObj) {
+
+      lsfData::Channel chTds = tdsObj->channel();
+      Channel chRoot(chTds.single(), chTds.all(), chTds.latc());
+      rootObj.initialize(tdsObj->injected(),tdsObj->delay(),
+              tdsObj->threshold(), chRoot);
+      rootObj.setSoftwareKey(tdsObj->softwareKey());
+      rootObj.setWriteCfg(tdsObj->writeCfg());
+      rootObj.setReadCfg(tdsObj->readCfg());
+      rootObj.setPeriod(tdsObj->period());
+      rootObj.setFlags(tdsObj->flags());
+  };
+
+  void convert( const LciTkrConfiguration* rootObj,
+                lsfData::LciTkrConfiguration*& tdsObj) {
+
+      Channel chRoot = rootObj->channel();
+      lsfData::Channel chTds(chRoot.single(), chRoot.all(), chRoot.latc());
+
+      tdsObj->set(rootObj->injected(),rootObj->delay(),
+              rootObj->threshold(), chTds);
+      tdsObj->setSoftwareKey(rootObj->softwareKey());
+      tdsObj->setWriteCfg(rootObj->writeCfg());
+      tdsObj->setReadCfg(rootObj->readCfg());
+      tdsObj->setPeriod(rootObj->period());
+      tdsObj->setFlags(rootObj->flags());
+  };
 
   void convert( const LsfEvent::MetaEvent& tdsObj, MetaEvent& rootObj) {
     RunInfo run;
@@ -125,8 +242,32 @@ namespace RootPersistence {
     convert(tdsObj.configuration(),config);
 
     rootObj.initialize(run,datagram,scalers,time,*config);
+    rootObj.setRunType(tdsObj.runType());
+
+    if ( tdsObj.runType() == enums::Lsf::LPA ) {
+      const lsfData::LpaConfiguration *lpa = tdsObj.configuration()->castToLpaConfig();
+      LpaConfiguration lpaRoot(lpa->hardwareKey(), lpa->softwareKey());
+      rootObj.setLpaConfiguration(lpaRoot);
+    } else if (tdsObj.runType() == enums::Lsf::AcdLCI) {
+      const lsfData::LciAcdConfiguration* acdTds = tdsObj.configuration()->castToLciAcdConfig();
+      LciAcdConfiguration acdRoot;
+      convert(acdTds, acdRoot);
+      rootObj.setLciAcdConfiguration(acdRoot);
+    } else if (tdsObj.runType() == enums::Lsf::CalLCI) {
+      const lsfData::LciCalConfiguration *calTds = tdsObj.configuration()->castToLciCalConfig();
+      LciCalConfiguration calRoot;
+      convert(calTds, calRoot);
+      rootObj.setLciCalConfiguration(calRoot);
+    } else if (tdsObj.runType() == enums::Lsf::TkrLCI ) {
+      const lsfData::LciTkrConfiguration *tkrTds = tdsObj.configuration()->castToLciTkrConfig();
+      LciTkrConfiguration tkrRoot;
+      convert(tkrTds, tkrRoot);
+      rootObj.setLciTkrConfiguration(tkrRoot);
+    }
+
     if (config) delete config;
   };
+
   void convert( const MetaEvent& rootObj, LsfEvent::MetaEvent& tdsObj) {
     lsfData::RunInfo run;
     lsfData::DatagramInfo datagram;
@@ -137,20 +278,46 @@ namespace RootPersistence {
     convert(rootObj.datagram(),datagram);
     convert(rootObj.scalers(),scalers);
     convert(rootObj.time(),time);
-    convert(rootObj.configuration(),config);
+    //convert(rootObj.configuration(),config);
     //tdsObj.set(run,datagram,scalers,time,*config);
-    tdsObj.setRun(run);
-    tdsObj.setDatagram(datagram);
-    tdsObj.setScalers(scalers);
-    tdsObj.setTime(time);
+
+    if ( rootObj.runType() == enums::Lsf::LPA ) {
+        const LpaConfiguration* lpaRoot = rootObj.lpaConfiguration();
+        lsfData::LpaConfiguration *lpaTds = new lsfData::LpaConfiguration;
+        convert(lpaRoot,lpaTds);
+        config = lpaTds->clone();
+        delete lpaTds;
+    } else if (rootObj.runType() == enums::Lsf::AcdLCI) {
+        const LciAcdConfiguration* acdRoot = rootObj.lciAcdConfiguration();
+        lsfData::LciAcdConfiguration *acdTds = new lsfData::LciAcdConfiguration;
+        convert(acdRoot, acdTds);
+        config = acdTds->clone();
+        delete acdTds;
+    } else if (rootObj.runType() == enums::Lsf::CalLCI) {
+        const LciCalConfiguration* calRoot = rootObj.lciCalConfiguration();
+        lsfData::LciCalConfiguration *calTds = new lsfData::LciCalConfiguration;
+        convert(calRoot, calTds);
+        config = calTds->clone();
+        delete calTds;
+    } else if (rootObj.runType() == enums::Lsf::TkrLCI ) {
+        std::cout << "TKR Config" << std::endl;
+        const LciTkrConfiguration* tkrRoot = rootObj.lciTkrConfiguration();
+        lsfData::LciTkrConfiguration *tkrTds = new lsfData::LciTkrConfiguration;
+        convert(tkrRoot, tkrTds);
+        config = tkrTds->clone();
+        delete tkrTds;
+    }
+
+    tdsObj.set(run,datagram,scalers,time,*config);
     if(config) delete config;
   };
 
   void convert( const LsfEvent::LsfCcsds& tdsObj, Ccsds& rootObj) {
       rootObj.initialize(tdsObj.scid(), tdsObj.apid(), tdsObj.utc());
-  }
+  };
 
   void convert (const Ccsds& rootObj, LsfEvent::LsfCcsds& tdsObj) {
       tdsObj.initialize(rootObj.getScid(), rootObj.getApid(), rootObj.getUtc());
-  }
+  };
+
 }

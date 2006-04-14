@@ -3,8 +3,7 @@
  author Ursula Berthon
  @verbatim
 
- v1r5rm1 12-Apr-2006 HMK Slightly modify MetaEvent converter to use explicit
-         set routines for each data members - allows one to skip Configuration
+ v1r5rm1 12-Apr-2006 HMK add converters for LCI Configurations 
  v1r5em0 06-Apr-2006 EAC Add converter for AcdTkr
  v1r5
  v1r4p3 26-Jan-2006 DC  Bug Fix

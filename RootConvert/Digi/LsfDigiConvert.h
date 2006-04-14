@@ -52,6 +52,26 @@ namespace RootPersistence {
   /// Fill transient verison of Configuration
   void convert( const Configuration*, lsfData::Configuration*& ) ;
 
+  /// Fill persitent verison of LpaConfiguration
+  void convert( const lsfData::LpaConfiguration*, LpaConfiguration&);
+  /// Fill transient verison of LpaConfiguration
+  void convert( const LpaConfiguration*, lsfData::LpaConfiguration*&);
+
+  /// Fill persitent verison of LciAcdConfiguration
+  void convert( const lsfData::LciAcdConfiguration*, LciAcdConfiguration&);
+  /// Fill transient verison of LciAcdConfiguration
+  void convert ( const LciAcdConfiguration*, lsfData::LciAcdConfiguration*&);
+
+  /// Fill persitent verison of LciCalConfiguration
+  void convert( const lsfData::LciCalConfiguration*, LciCalConfiguration&);
+  /// Fill transient verison of LciCalConfiguration
+  void convert ( const LciCalConfiguration*, lsfData::LciCalConfiguration*&);
+
+  /// Fill persitent verison of LciTkrConfiguration
+  void convert( const lsfData::LciTkrConfiguration*, LciTkrConfiguration&);
+  /// Fill transient verison of LciTkrConfiguration
+  void convert ( const LciTkrConfiguration*, lsfData::LciTkrConfiguration*&);
+
   /// Fill persitent verison of MetaEvent
   void convert( const LsfEvent::MetaEvent&, MetaEvent& ) ;
   /// Fill transient verison of MetaEvent
