@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: echarles  Thu Apr 13 17:38:29 PDT 2006
-RootConvert/cmt
-
-Modified Files:
-	requirements 
-Log Message:
-Merge in ACD stuff from Branch  EM-v6r070329p0, tag v1r5em0
-    *
-------------------------------------------------------------
-User: echarles  Thu Apr 13 17:38:29 PDT 2006
-RootConvert/RootConvert/Recon
-
-Modified Files:
-	AcdReconConvert.h 
-Log Message:
-Merge in ACD stuff from Branch  EM-v6r070329p0, tag v1r5em0
-    *
-------------------------------------------------------------
 User: heather  Wed Apr 12 14:49:16 PDT 2006
 RootConvert/src/Digi
 
