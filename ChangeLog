@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed May 31 13:34:47 PDT 2006
+RootConvert/RootConvert/Digi
+
+Added Files:
+	LsfDigiConvert.h 
+Log Message:
+add LSF handling to HEAD
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r5em2, operation: add
 Package: RootConvert
