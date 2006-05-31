@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed May 31 13:35:16 PDT 2006
+RootConvert/src/Digi
+
+Added Files:
+	LsfDigiConvert.cxx 
+Log Message:
+add LSF handling into head
+    *
+------------------------------------------------------------
 User: heather  Wed May 31 13:34:47 PDT 2006
 RootConvert/RootConvert/Digi
 
