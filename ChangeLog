@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: echarles  Wed Jun 21 17:57:09 PDT 2006
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Added AcdSplashVars
+    *
+------------------------------------------------------------
+User: echarles  Wed Jun 21 17:57:09 PDT 2006
 RootConvert/RootConvert/Recon
 
 Modified Files:
