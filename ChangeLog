@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Wed Jun 21 17:57:09 PDT 2006
+RootConvert/RootConvert/Recon
+
+Modified Files:
+	AcdReconConvert.h 
+Log Message:
+Added AcdSplashVars
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r8, operation: add
 Package: RootConvert
