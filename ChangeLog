@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Thu Jul  6 13:41:07 PDT 2006
+RootConvert/RootConvert/Digi
+
+Modified Files:
+	AdfDigiConvert.h 
+Log Message:
+moved TaggerHit and QdcHit
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r12, operation: add
 Package: RootConvert
