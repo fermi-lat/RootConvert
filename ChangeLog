@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Wed Jul 12 16:24:59 PDT 2006
+RootConvert/src/Recon
+
+Modified Files:
+	AdfReconConvert.cxx 
+Log Message:
+match QdcHit on TDS
+    *
+------------------------------------------------------------
+User: heather  Wed Jul 12 16:24:59 PDT 2006
 RootConvert/src/Digi
 
 Modified Files:
