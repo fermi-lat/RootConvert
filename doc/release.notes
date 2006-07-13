@@ -3,6 +3,7 @@
  author Ursula Berthon
  @verbatim
 
+ v1r5em3 13-Jul-2006 HMK remove old debug statement from LsfDigiConvert.cxx
  v1r5em2 14-Apr-2006 HMK patch to only set configuration when it exists
  v1r5em1 12-Apr-2006 HMK add converters for LCI Configurations 
  v1r5em0 06-Apr-2006 EAC Add converter for AcdTkr
