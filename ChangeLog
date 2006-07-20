@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Jul 19 22:13:35 PDT 2006
+RootConvert/RootConvert/Digi
+
+Modified Files:
+	AdfDigiConvert.h 
+Log Message:
+add ScalerHit
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r5em3, operation: add
 Package: RootConvert
