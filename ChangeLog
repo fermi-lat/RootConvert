@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Tue Jul 25 21:35:30 PDT 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+move AncillaryDataEvent to public use
+    *
+------------------------------------------------------------
+User: heather  Tue Jul 25 21:35:30 PDT 2006
 RootConvert/cmt
 
 Modified Files:
