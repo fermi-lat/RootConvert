@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Wed Aug 30 09:43:49 PDT 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+update cppflags for IExternal/obf
+    *
+------------------------------------------------------------
+User: heather  Wed Aug 30 09:43:49 PDT 2006
 RootConvert/cmt
 
 Modified Files:
