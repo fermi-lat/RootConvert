@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: wilko  Thu Sep 21 14:18:26 PDT 2006
+RootConvert/RootConvert/Utilities
+
+Added Files:
+	RootReaderUtil.h 
+Log Message:
+Utility to open root files and test if they exists that works with local files and files
+in Xrootd. Adds files to a TChain. 
+
+
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r19p1, operation: add
 Package: RootConvert
