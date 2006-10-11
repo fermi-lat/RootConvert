@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Oct 11 15:28:37 PDT 2006
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use curCnt rather than maxCnt for OBF TFCprojectionCol
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r20, operation: add
 Package: RootConvert
