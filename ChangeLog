@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Fri Nov 10 23:03:19 PST 2006
+RootConvert/src/Digi
+
+Modified Files:
+	OnboardFilterConvert.cxx 
+Log Message:
+handle best track data in FilterStatus
+    *
+------------------------------------------------------------
+User: heather  Fri Nov 10 23:03:19 PST 2006
 RootConvert/doc
 
 Modified Files:
