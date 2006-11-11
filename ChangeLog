@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Fri Nov 10 23:03:19 PST 2006
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+handle best track data in FilterStatus
+    *
+------------------------------------------------------------
 User: heather  Fri Nov 10 23:03:18 PST 2006
 RootConvert/cmt
 
