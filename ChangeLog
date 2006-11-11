@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Fri Nov 10 23:03:18 PST 2006
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+handle best track data in FilterStatus
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r21, operation: add
 Package: RootConvert
