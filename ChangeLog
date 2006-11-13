@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: claval  Mon Nov 13 02:32:31 PST 2006
+RootConvert/RootConvert/GcrSelect
+
+Added Files:
+	GcrSelectValsConvert.h GcrSelectedXtalConvert.h 
+Log Message:
+TDS <--> ROOT converters implemented for GCRCalib objects
+
+    *
+------------------------------------------------------------
 User: claval  Mon Nov 13 02:31:26 PST 2006
 RootConvert/src/GcrSelect
 
