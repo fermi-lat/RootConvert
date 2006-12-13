@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Wed Dec 13 07:17:49 PST 2006
+RootConvert/src/GcrSelect
+
+Modified Files:
+	GcrSelectedXtalConvert.cxx 
+Log Message:
+just a patch to remove unused lines
+    *
+------------------------------------------------------------
+User: heather  Wed Dec 13 07:17:49 PST 2006
 RootConvert/doc
 
 Modified Files:
