@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Dec 13 07:17:49 PST 2006
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+just a patch to remove unused lines
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r23, operation: add
 Package: RootConvert
