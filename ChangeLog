@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Mar 14 19:35:54 PDT 2007
+RootConvert/src/Utilities
+
+Modified Files:
+	RootReaderUtil.cxx 
+Log Message:
+add patch for v5.14.00d upgrade that fixes reading vector<Double32_t> reading
+    *
+------------------------------------------------------------
 User: heather  Wed Mar 14 19:35:53 PDT 2007
 RootConvert/doc
 
