@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Mar 14 19:35:53 PDT 2007
+RootConvert/RootConvert/Utilities
+
+Modified Files:
+	RootReaderUtil.h 
+Log Message:
+add patch for v5.14.00d upgrade that fixes reading vector<Double32_t> reading
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r24, operation: add
 Package: RootConvert
