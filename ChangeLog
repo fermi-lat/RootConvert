@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Sun Mar 18 18:10:24 PDT 2007
+RootConvert/RootConvert/Utilities
+
+Modified Files:
+	RootReaderUtil.h 
+Log Message:
+lessen patch burden on reader
+    *
+------------------------------------------------------------
 User: heather  Wed Mar 14 19:35:54 PDT 2007
 RootConvert/src/Utilities
 
