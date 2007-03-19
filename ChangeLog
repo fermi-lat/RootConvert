@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Sun Mar 18 18:10:24 PDT 2007
+RootConvert/src/Utilities
+
+Modified Files:
+	RootReaderUtil.cxx 
+Log Message:
+lessen patch burden on reader
+    *
+------------------------------------------------------------
+User: heather  Sun Mar 18 18:10:24 PDT 2007
 RootConvert/RootConvert/Utilities
 
 Modified Files:
