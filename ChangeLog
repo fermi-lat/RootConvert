@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: cohen  Fri Sep  7 13:35:56 PDT 2007
+RootConvert/src/Recon
+
+Added Files:
+	TkrTruncationInfoConvert.cxx 
+Log Message:
+add the conversion methods for the Tkr Truncation data
+
+    *
+------------------------------------------------------------
+User: cohen  Fri Sep  7 13:35:56 PDT 2007
 RootConvert/RootConvert/Recon
 
 Added Files:
