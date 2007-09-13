@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Sep 13 07:48:36 PDT 2007
+RootConvert/RootConvert/Digi
+
+Modified Files:
+	OnboardFilterConvert.h 
+Log Message:
+Preliminary check in of updates to output the ObfFillterStatus TDS class to root PDS.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r26p1, operation: add
 Package: RootConvert
