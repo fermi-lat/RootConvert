@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Sep 13 07:48:39 PDT 2007
+RootConvert/src/Digi
+
+Modified Files:
+	OnboardFilterConvert.cxx 
+Log Message:
+Preliminary check in of updates to output the ObfFillterStatus TDS class to root PDS.
+    *
+------------------------------------------------------------
 User: usher  Thu Sep 13 07:48:36 PDT 2007
 RootConvert/RootConvert/Digi
 
