@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Mon Sep 17 12:35:42 PDT 2007
+RootConvert/src/Recon
+
+Modified Files:
+	TkrTruncationInfoConvert.cxx 
+Log Message:
+Updating to almost working versions
+    *
+------------------------------------------------------------
+User: usher  Mon Sep 17 12:35:42 PDT 2007
 RootConvert/src/Digi
 
 Modified Files:
