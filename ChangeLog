@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Sep 17 21:29:04 PDT 2007
+RootConvert/src/Digi
+
+Modified Files:
+	OnboardFilterConvert.cxx 
+Log Message:
+Now looks like ObfFilterStatus output is working
+    *
+------------------------------------------------------------
 User: usher  Mon Sep 17 12:35:42 PDT 2007
 RootConvert/src/Recon
 
