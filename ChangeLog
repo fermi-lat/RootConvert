@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Sep 18 21:24:35 PDT 2007
+RootConvert/src/Recon
+
+Modified Files:
+	TkrTruncationInfoConvert.cxx 
+Log Message:
+use namespace
+    *
+------------------------------------------------------------
 User: heather  Tue Sep 18 21:24:15 PDT 2007
 RootConvert/cmt
 
