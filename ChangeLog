@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Sep 19 11:15:16 PDT 2007
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+patch warnings
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r27, operation: add
 Package: RootConvert
