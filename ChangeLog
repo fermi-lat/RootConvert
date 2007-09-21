@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Thu Sep 20 20:25:07 PDT 2007
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+turn off TkrTruncationData for now
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r27p1, operation: add
 Package: RootConvert
