@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: usher  Wed Jan  9 14:57:53 PST 2008
-RootConvert/src/Digi
-
-Modified Files:
-	OnboardFilterConvert.cxx 
-Log Message:
-Temporary fix so code will compile with temporary change to FilterStatus' get and set Best Track methods.
-    *
-------------------------------------------------------------
 TAG
 Tag name: v1r28, operation: add
 Package: RootConvert
