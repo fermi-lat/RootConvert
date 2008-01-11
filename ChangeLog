@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Jan 11 13:26:58 PST 2008
+RootConvert/src/Digi
+
+Modified Files:
+	OnboardFilterConvert.cxx 
+Log Message:
+add code to store/retrieve status byte information
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r28p1, operation: add
 Package: RootConvert
