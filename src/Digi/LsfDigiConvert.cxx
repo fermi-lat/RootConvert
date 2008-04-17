@@ -54,11 +54,11 @@ namespace RootPersistence {
   };
 
   void convert( const lsfData::RunInfo& tdsObj, RunInfo& rootObj) {
-    rootObj.initialize(tdsObj.platform(),tdsObj.dataOrigin(),tdsObj.id(),tdsObj.startTime());
+    rootObj.initialize(tdsObj.platform(),tdsObj.dataOrigin(),tdsObj.id(),tdsObj.startTime(),tdsObj.dataTransferId());
   };
 
   void convert( const RunInfo& rootObj, lsfData::RunInfo& tdsObj) {
-    tdsObj.set(rootObj.platform(),rootObj.dataOrigin(),rootObj.id(),rootObj.startTime());
+    tdsObj.set(rootObj.platform(),rootObj.dataOrigin(),rootObj.id(),rootObj.startTime(),rootObj.dataTransferId());
   };
    
   void convert( const lsfData::DatagramInfo& tdsObj, DatagramInfo& rootObj) {
