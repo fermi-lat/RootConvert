@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Thu Apr 17 21:25:27 PDT 2008
+RootConvert/src/Digi
+
+Modified Files:
+      Tag: GlastReleasev13r11p5
+	LsfDigiConvert.cxx 
+Log Message:
+update LpaKeys for new DFI
+    *
+------------------------------------------------------------
 User: heather  Thu Apr 17 21:25:26 PDT 2008
 RootConvert/doc
 
