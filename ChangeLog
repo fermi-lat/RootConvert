@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: usher  Mon Apr 28 14:12:11 PDT 2008
+RootConvert/src/Digi
+
+Modified Files:
+      Tag: GlastReleasev14r2
+	OnboardFilterConvert.cxx 
+Log Message:
+Modifications for changes to ObfFilterStatus and addition of ObfFilterTrack (see digiRootData updates)
+    *
+------------------------------------------------------------
 User: usher  Mon Apr 28 14:12:09 PDT 2008
 RootConvert/RootConvert/Digi
 
