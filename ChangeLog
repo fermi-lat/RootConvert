@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Wed May 21 18:35:27 PDT 2008
+RootConvert/RootConvert/Digi
+
+Modified Files:
+	OnboardFilterConvert.h 
+Log Message:
+Don't forget to update the OnboardFilterConvert header file!
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-34-00, operation: add
 Package: RootConvert
