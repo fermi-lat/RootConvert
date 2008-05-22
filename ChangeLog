@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Wed May 21 21:51:53 PDT 2008
+RootConvert/cmt
+
+Modified Files:
+      Tag: GlastReleasev15r1
+	requirements 
+Log Message:
+get the new dataTransfer id into GR v15 series
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-34-01, operation: add
 Package: RootConvert
