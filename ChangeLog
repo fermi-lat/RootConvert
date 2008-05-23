@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Thu May 22 18:57:43 PDT 2008
+RootConvert/cmt
+
+Modified Files:
+      Tag: GlastReleasev15r1
+	requirements 
+Log Message:
+LpaHandlers
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r32gr1, operation: add
 Package: RootConvert
