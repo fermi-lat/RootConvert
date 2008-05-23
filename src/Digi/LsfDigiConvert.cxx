@@ -13,6 +13,9 @@
 
 #include <RootConvert/Utilities/Toolkit.h>
 
+#include "TObjArray.h"
+#include "TCollection.h"
+
 
 namespace RootPersistence {
 
@@ -243,7 +246,9 @@ namespace RootPersistence {
   void convert( const LpaKeys* rootObj,
                 lsfData::LpaKeys*& tdsObj){
 
-    tdsObj->setCDM_keys(rootObj->CDM_keys());
+    
+    tdsObj->setSbs(rootObj->sbs());
+    tdsObj->setLpa_db(rootObj->lpa_db());
     tdsObj->setLATC_master(rootObj->LATC_master());
     tdsObj->setLATC_ignore(rootObj->LATC_ignore());
 
@@ -252,7 +257,8 @@ namespace RootPersistence {
   void convert( const lsfData::LpaKeys* tdsObj,
                 LpaKeys& rootObj) {
 
-    rootObj.setCDM_keys(tdsObj->CDM_keys());
+    rootObj.setSbs(tdsObj->sbs());
+    rootObj.setLpa_db(tdsObj->lpa_db());
     rootObj.setLATC_master(tdsObj->LATC_master());
     rootObj.setLATC_ignore(tdsObj->LATC_ignore());
   };
@@ -322,6 +328,43 @@ namespace RootPersistence {
       rootObj.setLciKeys(lciKeysRoot);
     }
 
+    std::map<enums::Lsf::HandlerId, lsfData::LpaHandler*> lpaCol = tdsObj.lpaHandlerCol();
+    std::map<enums::Lsf::HandlerId,lsfData::LpaHandler*>::const_iterator it;
+    for (it = lpaCol.begin(); it != lpaCol.end(); it++) {
+        if (it->first == enums::Lsf::PASS_THRU) {
+            LpaPassthruFilter *pass = new LpaPassthruFilter(it->second->status());
+            pass->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(enums::Lsf::PASS_THRU,pass);
+        } else if (it->first == enums::Lsf::GAMMA) {
+            LpaGammaFilter *gam = new LpaGammaFilter();
+            gam->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(enums::Lsf::GAMMA, gam);
+        } else if (it->first == enums::Lsf::MIP) {
+            LpaMipFilter *mip = new LpaMipFilter();
+            mip->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(enums::Lsf::MIP, mip);
+        } else if (it->first == enums::Lsf::HIP) {
+            LpaHipFilter *hip = new LpaHipFilter();
+            hip->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(enums::Lsf::HIP, hip);
+        } else if (it->first == enums::Lsf::DGN) {
+            LpaDgnFilter *dgn = new LpaDgnFilter();
+            dgn->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(enums::Lsf::DGN, dgn);
+        } else {
+            ILpaHandler* handler = new ILpaHandler();
+            handler->initialize(it->second->masterKey(),it->second->cfgKey(),it->second->cfgId(),it->second->state(),it->second->prescaler(),
+                it->second->version(),it->second->id(),it->second->has());
+            rootObj.addLpaHandler(it->first, handler);
+        }
+    }
+
+
   };
 
   void convert( const MetaEvent& rootObj, LsfEvent::MetaEvent& tdsObj) {
@@ -383,6 +426,78 @@ namespace RootPersistence {
         tdsObj.setKeys(*keys);
         delete keys;
     }
+
+    const TObjArray* lpaHandlerCol = rootObj.lpaHandler().getHandlerCol();
+    TIter handlerColIt(lpaHandlerCol);
+    ILpaHandler *handlerIt;
+    while ((handlerIt = (ILpaHandler*)handlerColIt.Next())) {
+        if (handlerIt->getId() == enums::Lsf::PASS_THRU) {
+
+            lsfData::PassthruHandlerRsdV0 pass;
+            pass.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            pass.setStatus(dynamic_cast<LpaPassthruFilter*>(handlerIt)->getStatus());
+            tdsObj.addLpaHandler(enums::Lsf::PASS_THRU, pass);
+
+        } else if (handlerIt->getId() == enums::Lsf::GAMMA) {
+
+            lsfData::GammaHandlerRsdV0 gam;
+            gam.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            LpaGammaFilter *rootGam = dynamic_cast<LpaGammaFilter*>(handlerIt);
+            gam.setStatus(rootGam->getStatus(),
+                          rootGam->getStage(), rootGam->getEnergyValid(),
+                          rootGam->getEnergyInLeus());
+            tdsObj.addLpaHandler(enums::Lsf::GAMMA, gam);
+
+        } else if (handlerIt->getId() == enums::Lsf::MIP) {
+
+            lsfData::MipHandlerRsdV0 mip;
+            mip.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            LpaMipFilter *rootMip = dynamic_cast<LpaMipFilter*>(handlerIt);
+            mip.setStatus(rootMip->getStatus());
+            tdsObj.addLpaHandler(enums::Lsf::MIP, mip);
+
+        } else if (handlerIt->getId() == enums::Lsf::HIP) {
+
+            lsfData::HipHandlerRsdV0 hip;
+            hip.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            LpaHipFilter *rootHip = dynamic_cast<LpaHipFilter*>(handlerIt);
+            hip.setStatus(rootHip->getStatus());
+            tdsObj.addLpaHandler(enums::Lsf::HIP, hip);
+
+        } else if (handlerIt->getId() == enums::Lsf::DGN) {
+
+            lsfData::DgnHandlerRsdV0 dgn;
+            dgn.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            LpaDgnFilter *rootDgn = dynamic_cast<LpaDgnFilter*>(handlerIt);
+            dgn.setStatus(rootDgn->getStatus());
+            tdsObj.addLpaHandler(enums::Lsf::DGN, dgn);
+
+        } else {
+            lsfData::LpaHandler handler;
+            handler.set(handlerIt->getMasterKey(),handlerIt->getCfgKey(),
+                     handlerIt->getCfgId(), handlerIt->getState(),
+                     handlerIt->getPrescaler(),handlerIt->getVersion(),
+                     handlerIt->getId(),handlerIt->has());
+            tdsObj.addLpaHandler(handlerIt->getId(), handler);
+
+        }
+
+   }
   };
 
   void convert( const LsfEvent::LsfCcsds& tdsObj, Ccsds& rootObj) {
