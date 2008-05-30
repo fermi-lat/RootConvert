@@ -3,6 +3,7 @@
  author David Chamont 
  @verbatim
 
+ v1r32gr4 29-May-2008 HMK RSDs are NULL for non-Gamma filters
  v1r32gr3 28-May-2008 HMK patches for LpaHandles to get it working
  v1r32gr2 21-May-2008 HMK Updates for new DFI and LpaHandlers
  v1r32gr1 21-May-2008 HMK Put JIRA ROOT-34 into version before OBF updates
