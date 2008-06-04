@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Jun  3 21:24:57 PDT 2008
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+merge in GlastReleasev15r1 branch
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r32gr4, operation: add
 Package: RootConvert
