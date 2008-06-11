@@ -1,20 +1,4 @@
 ------------------------------------------------------------
-User: usher  Wed Jun 11 12:12:06 PDT 2008
-RootConvert/src/Digi
-
-Modified Files:
-	OnboardFilterConvert.cxx 
-Log Message:
-    *
-------------------------------------------------------------
-User: usher  Wed Jun 11 12:11:22 PDT 2008
-RootConvert/RootConvert/Digi
-
-Modified Files:
-	OnboardFilterConvert.h 
-Log Message:
-    *
-------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-35-00, operation: add
 Package: RootConvert
