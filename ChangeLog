@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Thu Jun 12 20:56:43 PDT 2008
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+handle mootKey and prescaleFactor
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-36-00, operation: add
 Package: RootConvert
