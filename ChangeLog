@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Thu Jun 12 20:56:43 PDT 2008
+RootConvert/src/Digi
+
+Modified Files:
+	LsfDigiConvert.cxx 
+Log Message:
+handle mootKey and prescaleFactor
+    *
+------------------------------------------------------------
+User: heather  Thu Jun 12 20:56:43 PDT 2008
 RootConvert/doc
 
 Modified Files:
