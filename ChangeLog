@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Fri Jul 18 21:49:08 PDT 2008
+RootConvert/src/Digi
+
+Modified Files:
+	LsfDigiConvert.cxx 
+Log Message:
+prepare to write Gleam OBF to flight OBF for MC
+    *
+------------------------------------------------------------
+User: heather  Fri Jul 18 21:49:08 PDT 2008
 RootConvert/doc
 
 Modified Files:
