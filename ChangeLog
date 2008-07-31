@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Jul 30 20:50:47 PDT 2008
+RootConvert/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+handle compressionLevel
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-40-00, operation: add
 Package: RootConvert
