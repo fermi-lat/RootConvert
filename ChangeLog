@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Jul 30 20:50:48 PDT 2008
+RootConvert/src/Digi
+
+Modified Files:
+	LsfDigiConvert.cxx 
+Log Message:
+handle compressionLevel
+    *
+------------------------------------------------------------
 User: heather  Wed Jul 30 20:50:47 PDT 2008
 RootConvert/doc
 
