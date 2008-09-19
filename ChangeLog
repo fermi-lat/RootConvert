@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v1r42, operation: mov
+Package: RootConvert
+User: glastrm  Thu Sep 18 19:30:41 2008
+Files:
+  RootConvert/SConscript  1.2
+
+    *
+------------------------------------------------------------
 User: glastrm  Thu Sep 18 19:30:35 PDT 2008
 RootConvert
 
