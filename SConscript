@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/RootConvert/SConscript,v 1.2 2008/09/19 02:30:35 glastrm Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/RootConvert/SConscript,v 1.3 2008/10/27 17:15:08 ecephas Exp $
 # Authors: David Chamont <chamont@poly.in2p3.fr>, Heather Kelly <heather@slac.stanford.edu>
 # Version: RootConvert-01-42-00
 Import('baseEnv')
@@ -29,5 +29,7 @@ if baseEnv['PLATFORM'] == 'win32':
 progEnv.Tool('RootConvertLib')
 test_RootConvert = progEnv.Program('test_RootConvert', ['src/test/test_RootConvert.cxx'])
 
-progEnv.Tool('registerObjects', package = 'RootConvert', libraries = [RootConvert], testApps = [test_RootConvert], 
-	includes = listFiles(['RootConvert/*'], recursive = 1))
+progEnv.Tool('registerObjects', package = 'RootConvert', libraries = [RootConvert], testApps = [test_RootConvert], includes = listFiles(['RootConvert/*'], recursive = True))
+
+
+
