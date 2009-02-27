@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: echarles  Thu Feb 26 16:36:44 PST 2009
+RootConvert/src/Recon
+
+Modified Files:
+      Tag: GlastReleasev17r5
+	AcdReconConvert.cxx 
+Log Message:
+Changes for new Acd reconstruction
+    *
+------------------------------------------------------------
 User: echarles  Thu Feb 26 16:36:43 PST 2009
 RootConvert/RootConvert/Recon
 
