@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Mon Sep 14 07:50:21 PDT 2009
+RootConvert/src/MonteCarlo
+
+Modified Files:
+	McTkrStripConvert.cxx McTrajectoryConvert.cxx 
+Log Message:
+warnings
+    *
+------------------------------------------------------------
+User: heather  Mon Sep 14 07:50:21 PDT 2009
 RootConvert/src/GcrSelect
 
 Modified Files:
