@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Sep 14 16:34:17 PDT 2009
+RootConvert/src/Digi
+
+Modified Files:
+	OnboardFilterConvert.cxx 
+Log Message:
+Modifications to prevent linux compile warnings with the gamma filter objects
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-42-01, operation: add
 Package: RootConvert
