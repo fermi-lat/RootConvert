@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Wed Nov 11 17:04:07 PST 2009
+GlastRelease-scons/RootConvert
+
+Modified Files:
+	.cvsignore RootConvertLib.py SConscript 
+Log Message:
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-43-00, operation: add
 Package: RootConvert
