@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Tue Dec 15 07:11:50 PST 2009
+RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+merging in Eric's updates for AcdRecon for Pass 8
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-43-01, operation: add
 Package: RootConvert
