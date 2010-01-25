@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Mon Jan 25 09:24:24 PST 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+Updating converter for CalCluster to reflect modified structure
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-44-01, operation: add
 Package: RootConvert
