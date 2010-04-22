@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lbaldini  Thu Apr 22 02:13:53 PDT 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+Skewness calculation in the CAL moments analysis.
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-45-01, operation: add
 Package: RootConvert
