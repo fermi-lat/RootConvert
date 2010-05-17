@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Sun May 16 18:38:48 PDT 2010
+RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+Picking up Luca's changes to CalCluster, preparing to tag RootConvert-01-46-00
+    *
+------------------------------------------------------------
 User: lbaldini  Thu Apr 22 02:13:53 PDT 2010
 RootConvert/src/Recon
 
