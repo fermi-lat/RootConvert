@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: usher  Sun May 16 18:38:48 PDT 2010
+RootConvert/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Picking up Luca's changes to CalCluster, preparing to tag RootConvert-01-46-00
+    *
+------------------------------------------------------------
+User: usher  Sun May 16 18:38:48 PDT 2010
 RootConvert/cmt
 
 Modified Files:
