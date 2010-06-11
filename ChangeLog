@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Thu Jun 10 17:39:45 PDT 2010
+GlastRelease-scons/RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+updates for SCons build
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-46-00, operation: add
 Package: RootConvert
