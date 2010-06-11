@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/RootConvert/SConscript,v 1.12 2010/01/25 22:06:29 usher Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/RootConvert/SConscript,v 1.13 2010/05/17 01:38:48 usher Exp $
 # Authors: David Chamont <chamont@poly.in2p3.fr>, Heather Kelly <heather@slac.stanford.edu>
 # Version: RootConvert-01-46-00
 Import('baseEnv')
@@ -8,7 +8,7 @@ Import('packages')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-libEnv.Tool('RootConvertLib', depsOnly = 1)
+libEnv.Tool('addLinkDeps', package='RootConvert', toBuild='shared')
 
 RootConvert=libEnv.SharedLibrary('RootConvert',
                                  listFiles(['src/Utilities/*.cxx',
