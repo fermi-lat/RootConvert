@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Thu Jul 29 15:22:00 PDT 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalXtalRecDataConvert.cxx 
+Log Message:
+Modifying to include initialization of status bit word
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-46-01, operation: add
 Package: RootConvert
