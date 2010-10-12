@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: bregeon  Tue Oct 12 08:58:32 PDT 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+take into account the new CalMSTreeParams converter
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-46-02, operation: add
 Package: RootConvert
