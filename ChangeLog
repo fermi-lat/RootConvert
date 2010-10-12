@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: bregeon  Tue Oct 12 08:59:51 PDT 2010
+RootConvert/src/Recon
+
+Added Files:
+	CalMSTreeParamsConvert.cxx 
+Log Message:
+add converter for the CalCluster-CalMSTreeParams container
+    *
+------------------------------------------------------------
+User: bregeon  Tue Oct 12 08:59:51 PDT 2010
 RootConvert/RootConvert/Recon
 
 Added Files:
