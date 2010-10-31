@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Sat Oct 30 20:24:37 PDT 2010
+RootConvert
+
+Modified Files:
+      Tag: GlastReleasev15r47p12
+	SConscript 
+Log Message:
+update SConscript
+    *
+------------------------------------------------------------
 User: heather  Sat Oct 30 20:24:11 PDT 2010
 RootConvert/src/Recon
 
