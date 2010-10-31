@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Sat Oct 30 20:24:10 PDT 2010
+RootConvert/cmt
+
+Modified Files:
+      Tag: GlastReleasev15r47p12
+	requirements 
+Log Message:
+fix memory leak when reading CalXtalRecData
+    *
+------------------------------------------------------------
 User: bregeon  Tue Oct 12 08:59:51 PDT 2010
 RootConvert/src/Recon
 
