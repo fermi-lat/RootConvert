@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: bregeon  Tue Nov  2 09:22:49 PDT 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalClusterConvert.cxx 
+Log Message:
+take care of new member m_classesProb
+    *
+------------------------------------------------------------
 User: heather  Sun Oct 31 19:46:34 PDT 2010
 RootConvert/src/Recon
 
