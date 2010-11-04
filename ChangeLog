@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Wed Nov  3 20:07:09 PDT 2010
+RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+patch the patch
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-47-00, operation: add
 Package: RootConvert
