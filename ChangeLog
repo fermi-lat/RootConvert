@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: usher  Fri Nov  5 08:25:15 PDT 2010
+RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+Preparing to tag RootConvert-01-47-02
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-47-01, operation: add
 Package: RootConvert
