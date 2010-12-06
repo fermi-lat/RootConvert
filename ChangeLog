@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: lsrea  Mon Dec  6 12:45:04 PST 2010
+RootConvert/src/Recon
+
+Modified Files:
+	TkrTruncationInfoConvert.cxx 
+Log Message:
+Mods to do i/o for TKR truncation data
+
+    *
+------------------------------------------------------------
+User: lsrea  Mon Dec  6 12:45:04 PST 2010
 RootConvert/cmt
 
 Modified Files:
