@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: lsrea  Tue Dec 14 15:47:45 PST 2010
+RootConvert
+
+Modified Files:
+	SConscript 
+Log Message:
+update for TkrTrucation stuff
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-47-04, operation: add
 Package: RootConvert
