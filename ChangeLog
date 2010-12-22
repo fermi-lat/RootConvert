@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lbaldini  Wed Dec 22 04:39:57 PST 2010
+RootConvert/RootConvert/Recon
+
+Added Files:
+	CalXtalsParamsConvert.h 
+Log Message:
+Yet another container (hopefully the last one) added for the CAL clustering quantities.
+    *
+------------------------------------------------------------
 User: lbaldini  Tue Dec 21 01:57:48 PST 2010
 RootConvert/src/Recon
 
