@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lbaldini  Fri Dec 24 02:20:57 PST 2010
+RootConvert/src/Recon
+
+Modified Files:
+	CalFitParamsConvert.cxx 
+Log Message:
+Improvements in the CalFitParams tds-root conversion and minor formatting improvement.
+    *
+------------------------------------------------------------
 User: lbaldini  Wed Dec 22 04:39:57 PST 2010
 RootConvert/src/Recon
 
