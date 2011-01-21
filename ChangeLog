@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: lbaldini  Fri Jan 21 06:02:55 PST 2011
+RootConvert/src/GcrSelect
+
+Modified Files:
+	GcrSelectedXtalConvert.cxx 
+Log Message:
+First medium-size untabification.
+    *
+------------------------------------------------------------
+User: lbaldini  Fri Jan 21 06:02:55 PST 2011
 RootConvert/src/Digi
 
 Modified Files:
