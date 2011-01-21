@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: lbaldini  Fri Jan 21 06:02:55 PST 2011
+RootConvert/src/Digi
+
+Modified Files:
+	AdfDigiConvert.cxx LsfDigiConvert.cxx 
+Log Message:
+First medium-size untabification.
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-49-00, operation: add
 Package: RootConvert
