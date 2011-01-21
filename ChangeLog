@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: lbaldini  Fri Jan 21 06:02:55 PST 2011
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx AdfReconConvert.cxx CalClusterConvert.cxx 
+	CalFitParamsConvert.cxx CalMSTreeParamsConvert.cxx 
+	CalMomParamsConvert.cxx CalXtalsParamsConvert.cxx 
+	GcrTrackConvert.cxx 
+Log Message:
+First medium-size untabification.
+    *
+------------------------------------------------------------
+User: lbaldini  Fri Jan 21 06:02:55 PST 2011
 RootConvert/src/GcrSelect
 
 Modified Files:
