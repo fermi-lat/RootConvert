@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Fri Jun  3 15:28:33 PDT 2011
+RootConvert/src/Recon
+
+Modified Files:
+	CalMomParamsConvert.cxx 
+Log Message:
+Added member variable for storing ghost DOCA
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-49-02, operation: add
 Package: RootConvert
