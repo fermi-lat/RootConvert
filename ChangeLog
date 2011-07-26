@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Mon Jul 25 18:54:02 PDT 2011
+RootConvert/cmt
+
+Modified Files:
+      Tag: GlastReleasev17r35p23
+	requirements 
+Log Message:
+merge in SCons updates along P7 branch
+    *
+------------------------------------------------------------
+User: heather  Mon Jul 25 18:54:02 PDT 2011
 RootConvert
 
 Modified Files:
