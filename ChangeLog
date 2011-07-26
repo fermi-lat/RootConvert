@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Mon Jul 25 18:54:02 PDT 2011
+RootConvert
+
+Modified Files:
+      Tag: GlastReleasev17r35p23
+	RootConvertLib.py SConscript 
+Log Message:
+merge in SCons updates along P7 branch
+    *
+------------------------------------------------------------
 TAG
 Tag name: RootConvert-01-49-03, operation: add
 Package: RootConvert
