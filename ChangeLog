@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: heather  Thu Aug  4 12:21:41 PDT 2011
+RootConvert/doc
+
+Modified Files:
+      Tag: GlastReleasev17r35p23
+	release.notes 
+Log Message:
+patch to SConscript
+    *
+------------------------------------------------------------
+User: heather  Thu Aug  4 12:21:41 PDT 2011
 RootConvert/cmt
 
 Modified Files:
