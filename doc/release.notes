@@ -3,6 +3,7 @@
  author David Chamont 
  @verbatim
 
+ v1r42p1gr03 04-Aug-2011 HMK Leave out src/Tkr packages in SConscript
  v1r42p1gr02 25-Jul-2011 HMK Merge in SCons updates for P7 branch
  v1r42p1gr01 30-Oct-2010 HMK Patch for CalXtal conversion when reading, to
          avoid memory leak
