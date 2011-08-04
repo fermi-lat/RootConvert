@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/RootConvert/SConscript,v 1.29 2011/06/04 08:49:42 kadrlica Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/RootConvert/SConscript,v 1.5.106.1.22.1 2011/07/26 01:54:02 heather Exp $
 # Authors: David Chamont <chamont@poly.in2p3.fr>, Heather Kelly <heather@slac.stanford.edu>
-# Version: RootConvert-01-42-01-gr02
+# Version: RootConvert-01-42-01-gr03
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
@@ -17,7 +17,6 @@ RootConvert=libEnv.SharedLibrary('RootConvert',
                                             'src/Recon/Acd*.cxx',
                                             'src/Recon/Adf*.cxx',
                                             'src/Recon/Cal*.cxx',
-                                            'src/Recon/Tkr*.cxx',
                                             'src/Recon/Gcr*.cxx',
                                             'src/GcrSelect/*.cxx']))
 
