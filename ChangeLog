@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Mon Sep  5 16:44:42 PDT 2011
+RootConvert/RootConvert/Recon
+
+Modified Files:
+	AcdReconConvert.h 
+Log Message:
+Convert AcdCalAssoc in AcdRecon
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-19-03-07, operation: add
 Package: RootConvert
