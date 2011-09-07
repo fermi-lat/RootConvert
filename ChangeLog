@@ -2,6 +2,16 @@
 TAG
 Tag name: GlastRelease-17-35-24-gr04, operation: add
 Package: RootConvert
+User: heather  Wed Sep  7 14:25:39 2011
+Files:
+  RootConvert/src/GcrSelect/GcrSelectValsConvert.cxx  1.2
+  RootConvert/src/GcrSelect/GcrSelectedXtalConvert.cxx  1.2
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-17-35-24-gr04, operation: add
+Package: RootConvert
 User: heather  Wed Sep  7 14:25:33 2011
 Files:
   RootConvert/doc/.cvsignore  1.1.1.1
