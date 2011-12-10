@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Fri Dec  9 17:12:51 PST 2011
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Fix functions to output covariance matrices to recon
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr16, operation: add
 Package: RootConvert
