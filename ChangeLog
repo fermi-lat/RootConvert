@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kadrlica  Sat Feb 25 12:08:04 PST 2012
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Initialize covariance matrices for CalAssocCol
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr24, operation: add
 Package: RootConvert
