@@ -650,7 +650,8 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
   void convert( const AcdTkrHitPoca& root, Event::AcdTkrHitPoca& tds) {
     static HepSymMatrix localCov(2);
     static float position[2];
-    static const float mips[2] = {0.,0.};
+    static const float mips[2] = {0,0};
+    static const unsigned short flags[2] = {0,0};
     static Point poca;
     static Vector pocaVector;
     position[0] = root.getActiveX();
@@ -662,7 +663,7 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
     pocaVector.set(root.getPocaVector().X(),root.getPocaVector().Y(),root.getPocaVector().Z());
     idents::AcdId acdId = convert(root.getId());
     // set Top part of TDS object
-    tds.set(acdId,root.getTrackIndex(),mips,0.,0.,0.);
+    tds.set(acdId,root.getTrackIndex(),mips,0.,0.,0.,flags);
     // set PocaData part of TDS object
     tds.setPocaData(root.getArcLength(),root.getDoca(),root.getDocaErr(),poca,pocaVector);      
     // set LocalData part of TDS object
@@ -671,19 +672,23 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
 
   void convert( const Event::AcdTkrHitPoca& tds, AcdTkrHitPocaV2& root) {
     static Float_t mips[2];
+    static UShort_t flags[2];
     AcdId acdId = convert(tds.getId());
     mips[0] = tds.mipsPmtA(); mips[1] = tds.mipsPmtB();     
+    flags[0] = tds.flagsPmtA(); flags[1] = tds.flagsPmtB();     
     root.set(acdId,tds.trackIndex(),mips,
-             tds.vetoSigmaHit(),tds.vetoSigmaProj(),tds.vetoSigmaProp() ); 
+             tds.vetoSigmaHit(),tds.vetoSigmaProj(),tds.vetoSigmaProp(),flags ); 
     convert( (const Event::AcdTkrLocalCoords&)tds, root );
     convert( (const Event::AcdPocaData&)tds, root );  
   }
   void convert( const AcdTkrHitPocaV2& root, Event::AcdTkrHitPoca& tds) {
     static Float_t mips[2];
+    static UShort_t flags[2];
     idents::AcdId acdId = convert(root.getId());
     mips[0] = root.mipsPmtA(); mips[1] = root.mipsPmtB();     
+    flags[0] = root.flagsPmtA(); flags[1] = root.flagsPmtB();     
     tds.set(acdId,root.getTrackIndex(),mips,
-            root.vetoSigmaHit(),root.vetoSigmaProj(),root.vetoSigmaProp()); 
+            root.vetoSigmaHit(),root.vetoSigmaProj(),root.vetoSigmaProp(),flags); 
     convert( (const AcdTkrLocalCoordsV2&)root, tds );
     convert( (const AcdPocaDataV2&)root, tds );
   }
