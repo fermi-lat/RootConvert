@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: kadrlica  Fri Mar 16 13:49:35 PDT 2012
+RootConvert/src/Recon
+
+Modified Files:
+      Tag: GlastReleasev19r4p1
+	AcdReconConvert.cxx 
+Log Message:
+Added ACD flags to the HitPoca
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-lp19, operation: add
 Package: RootConvert
