@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/RootConvert/SConscript,v 1.29 2011/06/04 08:49:42 kadrlica Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/RootConvert/SConscript,v 1.30 2011/09/05 23:45:13 kadrlica Exp $
 # Authors: David Chamont <chamont@poly.in2p3.fr>, Heather Kelly <heather@slac.stanford.edu>
-# Version: RootConvert-01-49-04
+# Version: RootConvert-01-49-04-gr01
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
