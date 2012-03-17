@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: heather  Sat Mar 17 10:24:34 PDT 2012
+RootConvert
+
+Modified Files:
+      Tag: GlastReleasev19r4p1
+	SConscript 
+Log Message:
+add ACD flags to HitPoca
+    *
+------------------------------------------------------------
 User: kadrlica  Fri Mar 16 13:49:35 PDT 2012
 RootConvert/src/Recon
 
