@@ -255,20 +255,20 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
     } 
 
     const Event::AcdTkrAssocCol& tdsAcdTkrAssocs = tds.getTkrAssocCol() ;    
-    AcdTkrAssoc rootAcdTkrAssoc;
+    AcdAssoc rootAcdTkrAssoc;
     for ( Event::AcdTkrAssocCol::const_iterator itrAssoc = tdsAcdTkrAssocs.begin();
           itrAssoc != tdsAcdTkrAssocs.end(); itrAssoc++ ) {
-      const Event::AcdTkrAssoc* acdTkrAssocTDS = *itrAssoc;
-      AcdTkrAssoc* addedAssoc = root.addAcdTkrAssoc(rootAcdTkrAssoc);
+      const Event::AcdAssoc* acdTkrAssocTDS = *itrAssoc;
+      AcdAssoc* addedAssoc = root.addAcdTkrAssoc(rootAcdTkrAssoc);
       convert(*acdTkrAssocTDS,*addedAssoc);      
     } 
 
     const Event::AcdCalAssocCol& tdsAcdCalAssocs = tds.getCalAssocCol() ;    
-    AcdCalAssoc rootAcdCalAssoc;
+    AcdAssoc rootAcdCalAssoc;
     for ( Event::AcdCalAssocCol::const_iterator itrAssoc = tdsAcdCalAssocs.begin();
           itrAssoc != tdsAcdCalAssocs.end(); itrAssoc++ ) {
-      const Event::AcdCalAssoc* acdCalAssocTDS = *itrAssoc;
-      AcdCalAssoc* addedAssoc = root.addAcdCalAssoc(rootAcdCalAssoc);
+      const Event::AcdAssoc* acdCalAssocTDS = *itrAssoc;
+      AcdAssoc* addedAssoc = root.addAcdCalAssoc(rootAcdCalAssoc);
       convert(*acdCalAssocTDS,*addedAssoc);      
     } 
 
@@ -288,16 +288,16 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
 
     const TClonesArray& rootTkrAssocs = root.getTkrAssocCol();
     for ( Int_t iAssoc(0); iAssoc < rootTkrAssocs.GetEntriesFast(); iAssoc++ ) {
-      const AcdTkrAssoc* acdTkrAssocRoot = (const AcdTkrAssoc*)(rootTkrAssocs.UncheckedAt(iAssoc));
-      Event::AcdTkrAssoc* acdTkrAssocTds = new Event::AcdTkrAssoc();
+      const AcdAssoc* acdTkrAssocRoot = (const AcdAssoc*)(rootTkrAssocs.UncheckedAt(iAssoc));
+      Event::AcdAssoc* acdTkrAssocTds = new Event::AcdAssoc();
       convert(*acdTkrAssocRoot,*acdTkrAssocTds);
       tds.getTkrAssocCol().push_back(acdTkrAssocTds);
     }
 
     const TClonesArray& rootCalAssocs = root.getCalAssocCol();
     for ( Int_t iAssoc(0); iAssoc < rootCalAssocs.GetEntriesFast(); iAssoc++ ) {
-      const AcdCalAssoc* acdCalAssocRoot = (const AcdCalAssoc*)(rootCalAssocs.UncheckedAt(iAssoc));
-      Event::AcdCalAssoc* acdCalAssocTds = new Event::AcdCalAssoc();
+      const AcdAssoc* acdCalAssocRoot = (const AcdAssoc*)(rootCalAssocs.UncheckedAt(iAssoc));
+      Event::AcdAssoc* acdCalAssocTds = new Event::AcdAssoc();
       convert(*acdCalAssocRoot,*acdCalAssocTds);
       tds.getCalAssocCol().push_back(acdCalAssocTds);
     }
@@ -366,9 +366,9 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
              root.getNSidesHit(), root.getNSidesVeto());
   }
 
-  void convert( const Event::AcdTkrAssoc& tds, AcdTkrAssoc& root) {
-    static TMatrixDSym covStart;
-    static TMatrixDSym covEnd;
+  void convert( const Event::AcdAssoc& tds, AcdAssoc& root) {
+    static TMatrixDSym covStart(5);
+    static TMatrixDSym covEnd(5);
 
     TVector3 start = convert( tds.getStart() );
     TVector3 dir = convert3vector( tds.getDir() );
@@ -403,81 +403,9 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
     root.setPoint(rootAcdPoint);
   }
   
-  void convert( const AcdTkrAssoc& root, Event::AcdTkrAssoc& tds) { 
-    static HepSymMatrix covStart;
-    static HepSymMatrix covEnd;
-    Point start = convertPoint( root.getStart() );
-    Vector dir = convertVector( root.getDir() );
-    convert( root.getCovStart(), covStart );
-    convert( root.getCovEnd(), covEnd );
-    tds.set( root.getTrackIndex(), root.getUpward(), root.getEnergy(),
-             start, dir, 
-             root.getArcLength(), 
-             covStart, covEnd,
-             root.getTkrSSDVeto(), root.getCornerDoca() );
-
-    int nHitPoca = root.nAcdHitPoca();
-    for ( int iHitPoca(0); iHitPoca < nHitPoca; iHitPoca++ ) {
-      const AcdTkrHitPocaV2* acdPocaRoot = root.getHitPoca(iHitPoca);
-      Event::AcdTkrHitPoca* acdPocaTds = new Event::AcdTkrHitPoca();
-      convert(*acdPocaRoot,*acdPocaTds);
-      tds.addHitPoca(*acdPocaTds);
-    }
-
-    int nGapPoca = root.nAcdGapPoca();
-    for ( int iGapPoca(0); iGapPoca < nGapPoca; iGapPoca++ ) {
-      const AcdTkrGapPocaV2* acdPocaRoot = root.getGapPoca(iGapPoca);
-      Event::AcdTkrGapPoca* acdPocaTds = new Event::AcdTkrGapPoca();
-      convert(*acdPocaRoot,*acdPocaTds);
-      tds.addGapPoca(*acdPocaTds);
-    }
-
-    AcdTkrPointV2& acdPocaRoot = const_cast<AcdTkrPointV2&>(root.getPoint());
-    Event::AcdTkrPoint* acdPocaTds = new Event::AcdTkrPoint();
-    convert(acdPocaRoot,*acdPocaTds);
-    tds.setPoint(*acdPocaTds);
-  }
-  
-  void convert( const Event::AcdCalAssoc& tds, AcdCalAssoc& root) {
-    static TMatrixDSym covStart;
-    static TMatrixDSym covEnd;
-
-    TVector3 start = convert( tds.getStart() );
-    TVector3 dir = convert3vector( tds.getDir() );
-    convert( tds.getCovStart(), covStart );
-    convert( tds.getCovEnd(), covEnd );
-    root.set( tds.getTrackIndex(), tds.getUpward(), tds.getEnergy(),
-              start, dir, 
-              tds.getArcLength(), 
-              covStart, covEnd,
-              tds.getTkrSSDVeto(), tds.getCornerDoca() );
-
-    AcdTkrHitPocaV2 rootAcdHitPoca;
-    int nHitPoca = tds.nHitPoca();
-    for ( int iHitPoca(0); iHitPoca < nHitPoca; iHitPoca++ ) {
-      const Event::AcdTkrHitPoca* acdTkrHitPocaTDS = tds.getHitPoca(iHitPoca);
-      AcdTkrHitPocaV2* addedHitPoca = root.addHitPoca(rootAcdHitPoca);;
-      convert(*acdTkrHitPocaTDS,*addedHitPoca);
-      
-    }  
-    
-    AcdTkrGapPocaV2 rootAcdGapPoca;
-    int nGapPoca = tds.nGapPoca();
-    for ( int iGapPoca(0); iGapPoca < nGapPoca; iGapPoca++ ) {
-      const Event::AcdTkrGapPoca* acdTkrGapPocaTDS = tds.getGapPoca(iGapPoca);
-      AcdTkrGapPocaV2* addedGapPoca = root.addGapPoca(rootAcdGapPoca);
-      convert(*acdTkrGapPocaTDS,*addedGapPoca);      
-    }  
-    
-    AcdTkrPointV2 rootAcdPoint;
-    const Event::AcdTkrPoint* acdTkrPointTDS = tds.getPoint();
-    convert(*acdTkrPointTDS,rootAcdPoint);
-    root.setPoint(rootAcdPoint);
-  }
-  
-  void convert( const AcdCalAssoc& root, Event::AcdCalAssoc& tds) { 
-    static HepSymMatrix covStart;
-    static HepSymMatrix covEnd;
+  void convert( const AcdAssoc& root, Event::AcdAssoc& tds) { 
+    static HepSymMatrix covStart(5);
+    static HepSymMatrix covEnd(5);
     Point start = convertPoint( root.getStart() );
     Vector dir = convertVector( root.getDir() );
     convert( root.getCovStart(), covStart );
@@ -831,21 +759,29 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
   }
 
   void convert( const HepSymMatrix& tds, TMatrixDSym& root) {
+    //ADW: Make this function do something...
+    //return;
+    if ( tds.num_row() != root.GetNrows() ) return;
+    int size = tds.num_row();
+    for (int i = 0; i < size; i++) {
+      for (int j = i; j < size; j++) {
+        root[i][j] = root[j][i] = tds[i][j];
+      }
+    }
     return;
-    if ( tds.num_row() < 2 ) return;
-    root.ResizeTo(2,2);
-    root[0][0] = tds[0][0];
-    root[1][0] = tds[1][0];
-    root[1][1] = tds[1][1];
   }
 
   void convert( const TMatrixDSym& root, HepSymMatrix& tds) {    
+    //ADW: Make this function do something...
+    //return;
+    if ( root.GetNrows() != tds.num_row() ) return;
+    Int_t size = root.GetNcols();
+    for (int i = 0; i < size; i++) {
+      for (int j = i; j < size; j++) {
+        tds[i][j] = tds[j][i] = root[i][j];
+      }
+    }
     return;
-    if ( root.GetNcols() < 2 ) return;
-    if ( tds.num_row() < 2 ) return;
-    tds[0][0] = root[0][0];
-    tds[1][0] = root[1][0];
-    tds[1][1] = root[1][1];
   }
 
 }
