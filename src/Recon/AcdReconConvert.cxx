@@ -335,8 +335,10 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
       tileEnergySideRow[i] = tds.getTileEnergySideRow(i);
       tileEnergySideFace[i] = tds.getTileEnergySideFace(i+1);
     }
-    root.set( tds.getTileCount(), tds.getRibbonCount(), tds.getTileVeto(),
-              tds.getTileEnergy(), tds.getRibbonEnergy(), 
+
+    root.set( tds.getTileCount(), tds.getRibbonCount(), tds.getVetoCount(), tds.getTileVeto(),
+              tds.getTotalTileEnergy(), tds.getTotalRibbonEnergy(), tds.getTileEnergy(), tds.getRibbonEnergy(), 
+              tds.getGhostTileEnergy(), tds.getGhostRibbonEnergy(), tds.getTriggerTileEnergy(), tds.getTriggerRibbonEnergy(), 
               tds.getTileCountTop(), tileCountSideRow, tileCountSideFace,
               tds.getVetoCountTop(), vetoCountSideRow, vetoCountSideFace,
               tds.getTileEnergyTop(), tileEnergySideRow, tileEnergySideFace,
@@ -358,8 +360,9 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
       tileEnergySideRow[i] = root.getTileEnergySideRow(i);
       tileEnergySideFace[i] = root.getTileEnergySideFace(i+1);
     }
-    tds.set( root.getTileCount(), root.getRibbonCount(), root.getTileVeto(),
-             root.getTileEnergy(), root.getRibbonEnergy(), 
+    tds.set( root.getTileCount(), root.getRibbonCount(), root.getVetoCount(), root.getTileVeto(),
+             root.getTotalTileEnergy(), root.getTotalRibbonEnergy(), root.getTileEnergy(), root.getRibbonEnergy(), 
+             root.getGhostTileEnergy(), root.getGhostRibbonEnergy(), root.getTriggerTileEnergy(), root.getTriggerRibbonEnergy(), 
              root.getTileCountTop(), tileCountSideRow, tileCountSideFace,
              root.getVetoCountTop(), vetoCountSideRow, vetoCountSideFace,
              root.getTileEnergyTop(), tileEnergySideRow, tileEnergySideFace,
@@ -573,8 +576,9 @@ void convert( const AcdRecon & rootAcdRec, Event::AcdRecon & tdsAcdRec )
     pocaVector.SetXYZ(tds.getPocaVector().x(),tds.getPocaVector().y(),tds.getPocaVector().z());
     pocaData.set(tds.getArcLength(),tds.getDoca(),tds.getDocaErr(),poca,pocaVector);         
     AcdId acdId = convert(tds.getId());
-    root.set(acdId,tds.trackIndex(),local,pocaData); 
+    root.set(acdId,tds.trackIndex(),local,pocaData);
   }
+
   void convert( const AcdTkrHitPoca& root, Event::AcdTkrHitPoca& tds) {
     static HepSymMatrix localCov(2);
     static float position[2];
