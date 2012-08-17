@@ -1,7 +1,9 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/RootConvert/RootConvertLib.py,v 1.3 2009/01/23 00:21:01 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/RootConvert/RootConvertLib.py,v 1.4 2009/11/12 01:04:07 jrb Exp $
 def generate(env, **kw):
     if not kw.get('depsOnly', 0):
         env.Tool('addLibrary', library = ['RootConvert'])
+        if env['PLATFORM']=='win32' and env.get('CONTAINERNAME','')=='GlastRelease':
+	    env.Tool('findPkgPath', package = 'RootConvert') 
     env.Tool('EventLib')
     env.Tool('LdfEventLib')
     env.Tool('OnboardFilterTdsLib')
