@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Fri May 24 16:33:11 PDT 2013
+RootConvert/RootConvert/Recon
+
+Modified Files:
+	AcdReconConvert.h 
+Log Message:
+Added support of storing cone energies in AcdAssoc object, and changed cov matrices to floats
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-08-14, operation: add
 Package: RootConvert
