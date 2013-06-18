@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: lsrea  Mon Jun 17 18:48:27 PDT 2013
+RootConvert/src/Recon
+
+Modified Files:
+	TkrTruncationInfoConvert.cxx 
+Log Message:
+Removed static-ness from TkrNum[CC/RC]Truncs... fixed the problem!
+
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-08-17, operation: add
 Package: RootConvert
