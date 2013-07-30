@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Mon Jul 29 20:38:57 PDT 2013
+RootConvert/src/Recon
+
+Modified Files:
+	AcdReconConvert.cxx 
+Log Message:
+Protect against missing TkrPoint
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-09-01, operation: add
 Package: RootConvert
